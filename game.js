@@ -10,7 +10,7 @@ var config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 0 },
-            debug: true
+            debug: false
         
         }
 
@@ -73,7 +73,7 @@ var atras1;
 var atras2;
 var avanzar1;
 var avanzar2;
-var vidas = 1;
+var vidas = 3;
 var corazon;
 var puntuacion;
 var juegoTerminado;
