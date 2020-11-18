@@ -156,14 +156,19 @@ class Scene1 extends Phaser.Scene {
       
       //ganaste o perdiste
       this.load.image('tituloGanaste' , 'assets/nivelsuperado1.png ');
+      this.load.image('tituloGanasteBR' , 'assets/nivelsuperado1BR.png ');
+      this.load.image('tituloGanasteEN' , 'assets/nivelsuperado1EN.png ');
       this.load.image('tituloGanastefinal' , 'assets/Ganaste.png ');
       this.load.image('tituloPausa' , 'assets/menu_pausa-2.png');
+      this.load.image('tituloPausaEN' , 'assets/menu_pausa-2EN.png');
       this.load.image('fondoPausa' , 'assets/fondomenus.png');
       this.load.image('botonReiniciar1' , 'assets/boton1.png ');
       this.load.image('botonReiniciar2' , 'assets/boton2.png ');
       
       //no reutilizables
       this.load.image('tituloNivelPerdido' , 'assets/Nivelperdiste.png ');
+      this.load.image('tituloNivelPerdidoBR' , 'assets/NivelperdisteBR.png ');
+      this.load.image('tituloNivelPerdidoEN' , 'assets/NivelperdisteEN.png ');
       this.load.image('botonReintentar1' , 'assets/boton1.png ');
       this.load.image('EstrellaApagada' , 'assets/EstrellaApagada.png')
       this.load.image('botonReintentar2' , 'assets/boton2.png ');
@@ -176,6 +181,9 @@ class Scene1 extends Phaser.Scene {
       this.load.image('tutorial', 'assets/Preguntatuto.png');
       this.load.image('tutosi', 'assets/Situto.png');
       this.load.image('tutono', 'assets/Notuto.png');
+      this.load.image('tuto1', 'assets/botonchico1.png');
+      this.load.image('tuto2', 'assets/botonchico2.png');
+
       this.load.image('pantallatuto', 'assets/Pantallatuto.jpg');
       this.load.image('atras1', 'assets/atras1.png');
       this.load.image('atras2', 'assets/atras2.png');

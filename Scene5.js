@@ -7,15 +7,33 @@ create() {
   var Transparencia = this.add.image(400, 300, "transparencia");
 
    var menuPausa = this.add.image(640, 470, 'fondoPausa').setScale(.65).setInteractive({cursor: 'context-menu'})
-    this.add.image(640, 200, 'tituloPausa').setScale(.7)
-
-        //var tituloPausa = this.add.image(640, 190, 'tituloPausa').setScale(0.8)
-   
-   // this.add.image(640, 90, 'botonAyuda1').setScale(.9)
+    
    var reanudarPausa = this.add.image(645, 400, 'botonReiniciar1').setScale(.6)
    var reanudarPausa2 =  this.add.image(645, 400, 'botonReiniciar2').setScale(.6)
+   var menuPrincipal =  this.add.image(645, 480, 'botonReiniciar1').setScale(.6)
+   var menuPrincipal2 =   this.add.image(645, 480, 'botonReiniciar2').setScale(.6)
+  
 
-   text = this.add.text(600, 390, "REANUDAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+   var text;
+        if (idioma === 1)
+        {
+            this.add.image(640, 200, 'tituloPausa').setScale(0.7)
+            text = this.add.text(600, 390, "REANUDAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(575, 470, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        };
+        if (idioma === 2)
+        {
+            this.add.image(640, 200, 'tituloPausaEN').setScale(0.7)
+            text = this.add.text(600, 390, "RESUME", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(575, 470, "MAIN MENU", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        }
+        if (idioma === 3)
+        {
+            this.add.image(640, 200, 'tituloPausa').setScale(0.7)
+            text = this.add.text(600, 390, "RETOMAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(575, 470, "MENU PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        }
+  
     reanudarPausa2.setVisible(false)
             reanudarPausa.setInteractive()
             reanudarPausa.on('pointerdown', () => {
@@ -120,9 +138,7 @@ create() {
 
 
 
-            var menuPrincipal =  this.add.image(645, 480, 'botonReiniciar1').setScale(.6)
-            var menuPrincipal2 =   this.add.image(645, 480, 'botonReiniciar2').setScale(.6)
-            text = this.add.text(575, 470, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            
 
 
             menuPrincipal2.setVisible(false)
