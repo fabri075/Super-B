@@ -91,6 +91,20 @@ class Scene1 extends Phaser.Scene {
     this.load.image("musicaNO", "assets/botonPausaMusica2.png");
     this.load.image("sonidoSI", "assets/botonPausaSonido1.png");
     this.load.image("sonidoNO", "assets/botonPausaSonido2.png");
+
+    //TUTORIALES IDIOMAS ALTERNATIVOS
+    this.load.image('tuto1BR', 'assets/Tutorial-1BR.png');
+    this.load.image('tuto2BR', 'assets/Tutorial-2BR.png');
+    this.load.image('tuto3BR', 'assets/Tutorial-3BR.png');
+    this.load.image('tuto4BR', 'assets/Tutorial-4BR.png');
+
+    this.load.image('tuto1EN', 'assets/Tutorial-1EN.png');
+    this.load.image('tuto2EN', 'assets/Tutorial-2EN.png');
+    this.load.image('tuto3EN', 'assets/Tutorial-3EN.png');
+    this.load.image('tuto4EN', 'assets/Tutorial-4EN.png');
+
+    this.load.image('tutorialBR', 'assets/PreguntatutoBR.png');
+    this.load.image('tutorialEN', 'assets/PreguntatutoEN.png');
   
       
            
@@ -123,6 +137,7 @@ class Scene1 extends Phaser.Scene {
 
       
       this.load.image('creditos' , 'assets/creditos.jpg ');
+      this.load.image('creditos2' , 'assets/creditosen.jpg ');
       this.load.image('botonMenuPrincipal1' , 'assets/botonMenuPrincipal1.png ');
       this.load.image('botonMenuPrincipal2' , 'assets/botonMenuPrincipal2.png ');
       this.load.image('menuPausa' , 'assets/fondocartel.png ');
@@ -131,7 +146,7 @@ class Scene1 extends Phaser.Scene {
       this.load.image('botonAyuda1' , 'assets/botonAyuda1.png ');
       this.load.image('botonPausaMusica1' , 'assets/botonPausaMusica1.png ');
       this.load.image('botonPausaSonido1' , 'assets/botonPausaSonido1.png ');
-      this.load.image('hambur', 'assets/EstrellaPrendida.png');
+      this.load.image('EstrellaPrendida', 'assets/EstrellaPrendida.png');
       this.load.image('puntos', 'assets/Puntos.png');
       
       
@@ -150,12 +165,14 @@ class Scene1 extends Phaser.Scene {
       //no reutilizables
       this.load.image('tituloNivelPerdido' , 'assets/Nivelperdiste.png ');
       this.load.image('botonReintentar1' , 'assets/boton1.png ');
-      this.load.image('neneenfermo' , 'assets/EstrellaApagada.png')
+      this.load.image('EstrellaApagada' , 'assets/EstrellaApagada.png')
       this.load.image('botonReintentar2' , 'assets/boton2.png ');
       this.load.image('parte1' , 'assets/cinematica-1.jpg ');
       this.load.image('parte2' , 'assets/Cinematica-2.jpg ');
       this.load.image('parte3' , 'assets/Cinematica-3.jpg ');
       this.load.image('informacion', 'assets/Pantallainfo.jpg');
+      this.load.image('informacion2', 'assets/Pantallainfoen.jpg');
+      this.load.image('informacion3', 'assets/Pantallainfopt.jpg');
       this.load.image('tutorial', 'assets/Preguntatuto.png');
       this.load.image('tutosi', 'assets/Situto.png');
       this.load.image('tutono', 'assets/Notuto.png');
@@ -170,7 +187,6 @@ class Scene1 extends Phaser.Scene {
       this.load.image('tuto4', 'assets/Tutorial-4.png');
       this.load.spritesheet('logounraf', 'assets/logounraf.png', { frameWidth: 400, frameHeight: 220 })
 
-      
     //imagen de idioma
     this.load.image("españolsi" , "assets/Idiomas/ArgentinaColor.png");
     this.load.image("españolno" , "assets/Idiomas/ArgentinaNoColor.png");
@@ -184,8 +200,12 @@ class Scene1 extends Phaser.Scene {
     //*final victoria
     this.load.image("Fondovictoria", "assets/FondoVictoria.jpg");
     this.load.image("Cartelvictoria", "assets/Cartelvictoria.png");
+    this.load.image("CartelvictoriaEN", "assets/CartelvictoriaEN.png");
+    this.load.image("CartelvictoriaBR", "assets/CartelvictoriaBR.png");
     this.load.image("Fondoperdiste", "assets/Fondoperdiste.jpg");
     this.load.image("Cartelperdiste", "assets/Cartelperdiste.png");
+    this.load.image("CartelperdisteEN", "assets/CartelperdisteEN.png");
+    this.load.image("CartelperdisteBR", "assets/CartelperdisteBR.png");
 
    
     }
@@ -206,7 +226,7 @@ class Scene1 extends Phaser.Scene {
       
       logo.setInteractive()
       logo.on('pointerdown', () => {  
-                                      this.scene.start('nivel1');
+                                      this.scene.start('menu');
                                     } );
 
       // Funcion FLECHA

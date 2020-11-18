@@ -48,19 +48,32 @@ var hamburguesa16;
 var hamburguesa17;
 var hamburguesa18;
 var tuto;
+var tutoBR;
+var tutoEN;
 var notuto;
 var situto;
 var textotuto;
 var text;
+
+//variables tutorial
 var tuto1;
 var tuto2;
 var tuto3;
 var tuto4;
+var tuto1BR;
+var tuto2BR;
+var tuto3BR;
+var tuto4BR;
+var tuto1EN;
+var tuto2EN;
+var tuto3EN;
+var tuto4EN;
+
 var atras1;
 var atras2;
 var avanzar1;
 var avanzar2;
-var vidas = 3;
+var vidas = 1;
 var corazon;
 var puntuacion;
 var juegoTerminado;
@@ -145,3 +158,4 @@ var Cartelvictoria;
 var Fondovictoria;
 var Cartelperdiste;
 var Fondoperdiste;
+var idioma = 1;

@@ -7,32 +7,55 @@ class Scene7 extends Phaser.Scene {
     create(){
         var Fondoperdiste = this.add.image(635, 380, "Fondoperdiste").setScale(.7);
         var Cartelperdiste = this.add.image(650, 480, "Cartelperdiste").setScale(.7);
+        if ( idioma === 1){
+            var Cartelperdiste = this.add.image(650, 480, "Cartelperdiste").setScale(.7);
+        }
+            if ( idioma === 3){
+                var Cartelperdiste = this.add.image(650, 480, "CartelperdisteBR").setScale(.7);
+            }
+                if ( idioma === 2){
+                    var Cartelperdiste = this.add.image(650, 480, "CartelperdisteEN").setScale(.7);
+                }
 
 
-            if (perder === 0){
-                this.add.image(520, 340, 'hambur').setScale(.6)
-                this.add.image(640, 320, 'hambur').setScale(.8)
-                this.add.image(760, 340, 'hambur').setScale(.6)
-            }
-            if (perder === 1){
-                this.add.image(520, 340, 'neneenfermo').setScale(.6)
-                this.add.image(640, 320, 'hambur').setScale(.8)
-                this.add.image(756, 340,  'hambur').setScale(.6)
-            }
-            if (perder === 2){
-                this.add.image(520, 340,  'neneenfermo').setScale(.6)
-                this.add.image(640, 320, 'hambur').setScale(.8)
-                this.add.image(760, 340, 'neneenfermo').setScale(.6)
-            }
-            scorefinaltext = this.add.text(565, 505, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
+
+        if (contadorMalas > contadorBuenas){
+            this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
+            this.add.image(640, 375, 'EstrellaApagada').setScale(.8)
+            this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
+        }
+        if (contadorMalas === contadorBuenas){
+            this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365,  'EstrellaApagada').setScale(.6)
+        }
+        if (contadorMalas < contadorBuenas ){
+            this.add.image(525, 365,  'EstrellaPrendida').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
+        }
+        if ( idioma === 1){
+            scorefinaltext = this.add.text(563, 525, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+            if ( idioma === 3){
+                scorefinaltext = this.add.text(563, 525, "Pontos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+                if ( idioma === 2){
+                    scorefinaltext = this.add.text(563, 525, "Points " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+
             Musicagame.stop();   
             perdersonido = this.sound.add("perdersonido", {loop: false});
             if (efsonido === true){
             perdersonido.play();
             }
-            var botonReintentar1 = this.add.image(643, 590, 'botonReintentar1').setScale(.7)
-            var botonReintentar2 = this.add.image(643, 590, 'botonReintentar2').setScale(.7)
-            text = this.add.text(570, 580, "VOLVER A EMPEZAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
+            var botonReintentar1 = this.add.image(643, 598, 'botonReintentar1').setScale(.6)
+            var botonReintentar2 = this.add.image(643, 598, 'botonReintentar2').setScale(.6)
+            if ( idioma === 1){
+                scorefinaltext = this.add.text(570, 588, "VOLVER A EMPEZAR ",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});}
+                if ( idioma === 3){
+                    scorefinaltext = this.add.text(581, 588, "COMEÇAR DE NOVO",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
+                }
+                    if ( idioma === 2){
+                        scorefinaltext = this.add.text(595, 588, "START AGAIN",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
+                    }
             botonReintentar2.setVisible(false);
             botonReintentar1.setInteractive();
             botonReintentar1.on('pointerdown', () => {  
@@ -55,9 +78,17 @@ class Scene7 extends Phaser.Scene {
 
     } );
         
-        var menuPrincipal = this.add.image(645, 660, 'botonReintentar1').setScale(.7)
-        var menuPrincipal2 = this.add.image(645, 660, 'botonReintentar2').setScale(.7)
-        text = this.add.text(581, 650, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        var menuPrincipal = this.add.image(645, 663, 'botonReintentar1').setScale(.6)
+        var menuPrincipal2 = this.add.image(645, 663, 'botonReintentar2').setScale(.6)
+        
+        if ( idioma === 1){
+            scorefinaltext = this.add.text(576, 653, "MENÚ PRINCIPAL",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});}
+            if ( idioma === 3){
+                scorefinaltext = this.add.text(581, 653, "MENU PRINCIPAL",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
+            }
+                if ( idioma === 2){
+                    scorefinaltext = this.add.text(595, 653, "MAIN MENU",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
+                }
 
         menuPrincipal2.setVisible(false);
         menuPrincipal.setInteractive()

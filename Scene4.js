@@ -5,10 +5,27 @@ class Scene4 extends Phaser.Scene {
 
 create() {
 
-    this.add.image(650, 350, 'creditos').setScale(.7)
-
-    var menuPrincipal =  this.add.image(862, 620, 'botonMenuPrincipal2').setScale(.7)
-    var menuPrincipal2 =  this.add.image(862, 620, 'botonMenuPrincipal1').setScale(.7)
+    
+    var txtmenu;
+    var textomenu;
+    if (idioma === 1)
+    {
+      this.add.image(650, 350, 'creditos').setScale(.7)
+      txtmenu = 'MENÚ PRINCIPAL'
+    };
+    if (idioma === 2)
+    {
+      this.add.image(650, 350, 'creditos2').setScale(.7)
+      txtmenu = '    MAIN MENU'
+    }
+    if (idioma === 3)
+    {
+      this.add.image(650, 350, 'creditos').setScale(.7)
+      txtmenu = 'MENU PRINCIPAL'
+    }
+    var menuPrincipal =  this.add.image(862, 620, 'botonReiniciar1').setScale(.7)
+    var menuPrincipal2 =  this.add.image(862, 620, 'botonReiniciar2').setScale(.7)
+    textomenu = this.add.text(775, 603, txtmenu, {fontSize: '28px', fill: '#FFFFFF', fontFamily: 'Boogaloo'});
     menuPrincipal2.setVisible(false)
         menuPrincipal.setInteractive()
         menuPrincipal.on('pointerdown', () => {

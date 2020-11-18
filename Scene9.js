@@ -4,18 +4,35 @@ class Scene9 extends Phaser.Scene {
     }
     
     create(){
-        this.add.image(650, 350, 'informacion').setScale(0.7)
-        var menuPrincipal =  this.add.image(730, 650, 'botonMenuPrincipal2').setScale(.7)
-            var menuPrincipal2 =  this.add.image(730, 650, 'botonMenuPrincipal1').setScale(.7)
-            menuPrincipal2.setVisible(false)
-                menuPrincipal.setInteractive()
-                menuPrincipal.on('pointerdown', () => {
-                    if(efsonido === true ){
-                        BotonSonido = this.sound.add("botonsonido" , {loop: false});
-                        BotonSonido.play();}
-                    this.scene.stop('info');
-                    this.scene.start('menu');
-                    Musicamenu.stop();
+        
+        var txtmenui;
+        if (idioma === 1)
+        {
+            this.add.image(650, 350, 'informacion').setScale(0.7)
+          txtmenui = 'MENÚ PRINCIPAL'
+        };
+        if (idioma === 2)
+        {
+            this.add.image(650, 350, 'informacion2').setScale(0.7)
+          txtmenui = '    MAIN MENU'
+        }
+        if (idioma === 3)
+        {
+            this.add.image(650, 350, 'informacion3').setScale(0.7)
+          txtmenui = 'MENU PRINCIPAL'
+        }    
+        var menuPrincipal =  this.add.image(730, 675, 'botonReiniciar1').setScale(.7)
+        var menuPrincipal2 =  this.add.image(730, 675, 'botonReiniciar2').setScale(.7)
+        this.add.text(640, 658, txtmenui, {fontSize: '28px', fill: '#FFFFFF', fontFamily: 'Boogaloo'});
+        menuPrincipal2.setVisible(false)
+        menuPrincipal.setInteractive()
+        menuPrincipal.on('pointerdown', () => {
+        if(efsonido === true ){
+                BotonSonido = this.sound.add("botonsonido" , {loop: false});
+                BotonSonido.play();}
+                this.scene.stop('info');
+                this.scene.start('menu');
+                Musicamenu.stop();
 
         } );   
         menuPrincipal.on('pointerover', function (e) {

@@ -15,6 +15,18 @@ class Scene3 extends Phaser.Scene {
         this.add.image(640, 195, 'casita').setScale(.7, .7)
         this.add.image(628, 170, 'casitaFondo').setScale(.75, 1)
         this.add.image(640, 45, 'uiCont').setScale(0.695, 0.67)
+        if(idioma === 1)
+        
+        {this.add.text(10, 25, 'NIVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
+
+        if(idioma === 2)
+        
+        {this.add.text(10, 25, 'NÍVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
+
+        if(idioma === 3)
+        
+        {this.add.text(10, 25, 'LEVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
+
 
 
        

@@ -10,19 +10,19 @@ class Scene7a extends Phaser.Scene {
             this.add.image(640, 180, 'tituloNivelPerdido').setScale(.6)
            
             if (perder === 0){
-                this.add.image(525, 365, 'hambur').setScale(.6)
-                this.add.image(640, 375, 'hambur').setScale(.8)
-                this.add.image(755, 365, 'hambur').setScale(.6)
+                this.add.image(525, 365, 'EstrellaPrendida').setScale(.6)
+                this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+                this.add.image(755, 365, 'EstrellaPrendida').setScale(.6)
             }
             if (perder === 1){
-                this.add.image(525, 365, 'neneenfermo').setScale(.6)
-                this.add.image(640, 375, 'hambur').setScale(.8)
-                this.add.image(755, 365,  'hambur').setScale(.6)
+                this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
+                this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+                this.add.image(755, 365,  'EstrellaPrendida').setScale(.6)
             }
             if (perder === 2){
-                this.add.image(525, 365,  'neneenfermo').setScale(.6)
-                this.add.image(640, 375, 'hambur').setScale(.8)
-                this.add.image(755, 365, 'neneenfermo').setScale(.6)
+                this.add.image(525, 365,  'EstrellaApagada').setScale(.6)
+                this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+                this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
             }
 
 

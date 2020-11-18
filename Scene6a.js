@@ -4,27 +4,41 @@ class Scene6a extends Phaser.Scene {
     }
     
     create(){
-        var Fondovictoria = this.add.image(600, 500, "Fondovictoria");
-        var Cartelvictoria = this.add.image(650, 500, "Cartelvictoria").setScale(.7);
+        var Fondovictoria = this.add.image(635, 380, "Fondovictoria").setScale(.7);
+
+        if ( idioma === 1){
+            var Cartelvictoria = this.add.image(650, 500, "Cartelvictoria").setScale(.7);
+        }
+            if ( idioma === 3){
+                var Cartelvictoria = this.add.image(650, 500, "CartelvictoriaBR").setScale(.7);}
+                if ( idioma === 2){
+                    var Cartelvictoria = this.add.image(650, 500, "CartelvictoriaEN").setScale(.7);}
+
+
 
        
 
         if (perder === 0){
-            this.add.image(520, 355,  'hambur').setScale(.8)
-            this.add.image(640, 330, 'hambur').setScale(.9)
-            this.add.image(760, 355,  'hambur').setScale(.8)
+            this.add.image(525, 365, 'EstrellaPrendida').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365, 'EstrellaPrendida').setScale(.6)
         }
         if (perder === 1){
-            this.add.image(520, 355, 'neneenfermo').setScale(.8)
-            this.add.image(640, 330, 'hambur').setScale(.9)
-            this.add.image(760, 355, 'hambur').setScale(.8)
+            this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365,  'EstrellaPrendida').setScale(.6)
         }
-        if (perder === 2){
-            this.add.image(520, 355,  'neneenfermo').setScale(.8)
-            this.add.image(640, 330, 'neneenfermo').setScale(.9)
-            this.add.image(760, 355,  'hambur').setScale(.8)
+        if (perder === 1 && tiempoNivel < 10 ){
+            this.add.image(525, 365,  'EstrellaApagada').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
         }
-        scorefinaltext = this.add.text(560, 540, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
+        if ( idioma === 1){
+            scorefinaltext = this.add.text(563, 540, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+            if ( idioma === 3){
+                scorefinaltext = this.add.text(563, 540, "Pontos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+                if ( idioma === 2){
+                    scorefinaltext = this.add.text(563, 540, "Points " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
         Musicagame.stop();    
         ganarsonido = this.sound.add("ganarsonido", {loop: false});
         if (efsonido === true){
@@ -34,7 +48,19 @@ class Scene6a extends Phaser.Scene {
     
     var menuPrincipal = this.add.image(645, 640, 'botonReiniciar1').setScale(.6)
     var menuPrincipal2 = this.add.image(645, 640, 'botonReiniciar2').setScale(.6)
-    text = this.add.text(581, 630, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
+
+
+    
+    if ( idioma === 1){
+        scorefinaltext = this.add.text(581, 630, "MENÚ PRINCIPAL ",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});}
+        if ( idioma === 3){
+            scorefinaltext = this.add.text(581, 630, "MENU PRINCIPAL",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
+        }
+            if ( idioma === 2){
+                scorefinaltext = this.add.text(595, 630, "MAIN MENU",{ fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
+            }
+
+
 
     menuPrincipal2.setVisible(false);
     menuPrincipal.setInteractive()

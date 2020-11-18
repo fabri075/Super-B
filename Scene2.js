@@ -1,3 +1,22 @@
+var txtnuevo;
+var txtsel;
+var txtcred;
+var txtinfo;
+var botonNuevoJuego;
+var botonNuevoJuego2;
+var botonInfo;
+var botonInfo2;
+var botonCreditos;
+var botonCreditos2;
+var selector;
+var selector2;
+var Español1;
+var Español;
+var Portugues1;
+var Portugues;
+var Ingles1;
+var Ingles;
+
 class Scene2 extends Phaser.Scene {
     constructor() {
       super('menu');
@@ -6,71 +25,14 @@ class Scene2 extends Phaser.Scene {
     create() {
 
       this.add.image(650, 350, 'menu').setScale(0.7)
+      Español1 = this.add.image(90, 670, "españolno").setScale(.5).setInteractive(); 
+      Español = this.add.image(90, 670, "españolsi" ).setScale(.5).setInteractive();
+      Portugues1 = this.add.image(210, 670, "portuguesno").setScale(.5).setInteractive();
+      Portugues = this.add.image(210, 670, "portuguessi" ).setScale(.5).setInteractive();
+      Ingles1 = this.add.image(150, 670, "inglesno").setScale(.5).setInteractive();
+      Ingles = this.add.image(150, 670, "inglessi" ).setScale(.5).setInteractive();
 
-      var Español1 = this.add.image(90, 670, "españolno").setScale(.5);   
-Español1.setVisible(false);
-   var Español = this.add.image(90, 670, "españolsi" ).setScale(.5);
-   Español.setVisible(true);
-   Español.setInteractive()
-   Español.on('pointerdown',()=>{});
-
-    Español1.setInteractive()
-    Español1.on('pointerdown',  () => { 
-      if(Español.setVisible(false) && Portugues.setVisible(true) || Ingles.setVisible(true)){
-        Ingles.setVisible(false);
-        Ingles1.setVisible(true);
-        Español.setVisible(true);
-        Español1.setVisible(false);
-        Portugues.setVisible(false);
-        Portugues1.setVisible(true);
-      }
-   });
-   
-   //Ingles
-   var Ingles1 = this.add.image(150, 670, "inglesno").setScale(.5);
-   var Ingles = this.add.image(150, 670, "inglessi" ).setScale(.5);
-   Ingles.setVisible(false);   
-  Ingles.setInteractive()
-   Ingles.on('pointerdown',  () => { 
-    ;
-   
-    });
-
-    Ingles1.setInteractive()
-    Ingles1.on('pointerdown',  () => { 
-      if(Ingles.setVisible(false) && Español.setVisible(true) || Portugues.setVisible(true)){
-        Ingles.setVisible(true);
-        Ingles1.setVisible(false);
-        Español.setVisible(false);
-        Español1.setVisible(true);
-        Portugues.setVisible(false);
-        Portugues1.setVisible(true);
-        }
-     });
-
-
- //Portugues
-   var Portugues1 = this.add.image(210, 670, "portuguesno").setScale(.5);
-   var Portugues = this.add.image(210, 670, "portuguessi" ).setScale(.5);
-   Portugues.setVisible(false);
-   Portugues.setInteractive()
-   Portugues.on('pointerdown',  () => { 
-    });
-
-    Portugues1.setInteractive()
-    Portugues1.on('pointerdown',  () => { 
-      
-        if(Portugues.setVisible(false) && Español.setVisible(true) || Ingles.setVisible(true)){
-          Ingles.setVisible(false);
-          Ingles1.setVisible(true);
-          Español.setVisible(false);
-          Español1.setVisible(true);
-          Portugues.setVisible(true);
-          Portugues1.setVisible(false);} });
-
-
-
-
+     
       Musicamenu= this.sound.add("musicamenu", {loop: true});
       Musicamenu.play();
       //On y Off muscia
@@ -110,9 +72,6 @@ Español1.setVisible(false);
           MusicNivel = false;
         });
       }
-      
-      
-      
 
       
         //On y Off sonidos
@@ -153,10 +112,10 @@ Español1.setVisible(false);
           efsonido = true;
           });
         }
-      var botonNuevoJuego = this.add.image(670, 690, 'botonNuevoJuego').setScale(0.65)
-      var botonNuevoJuego2 = this.add.image(670, 690, 'botonNuevoJuego2').setScale(0.65) 
-      botonNuevoJuego2.setVisible(false);
-        botonNuevoJuego.setInteractive()
+        botonNuevoJuego = this.add.text(650, 670, txtnuevo, { fontSize: '40px', fill: '#E8E45A', fontFamily: 'Boogaloo'}).setScale(0.9)
+        botonNuevoJuego2 = this.add.text(650, 670, txtnuevo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9) 
+        botonNuevoJuego2.setVisible(false);
+        botonNuevoJuego.setInteractive();
         botonNuevoJuego.on('pointerdown', () => { Musicamenu.stop();
           if(efsonido === true ){
             BotonSonido = this.sound.add("botonsonido" , {loop: false});
@@ -165,8 +124,8 @@ Español1.setVisible(false);
                                        this.scene.start('cinematica');
                                        } );
       
-      var botonInfo = this.add.image(825, 690, 'botonInfo').setScale(0.65)
-      var botonInfo2 = this.add.image(825, 690, 'botonInfo2').setScale(0.65)  
+      botonInfo = this.add.text(1030, 670, txtinfo, { fontSize: '40px', fill: '#E8E45A', fontFamily: 'Boogaloo'}).setScale(0.9)
+      botonInfo2 = this.add.text(1030, 670, txtinfo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)  
       botonInfo2.setVisible(false);
       botonInfo.setInteractive()
       botonInfo.on('pointerdown', () => {
@@ -175,8 +134,8 @@ Español1.setVisible(false);
           BotonSonido.play();}
                                      this.scene.start('info');
                                      } );                                
-      var botonCreditos = this.add.image(950, 691, 'botonCreditos').setScale(0.65) 
-      var botonCreditos2 = this.add.image(950, 691, 'botonCreditos2').setScale(0.65)
+      botonCreditos = this.add.text(1130, 670, txtcred, { fontSize: '40px', fill: '#E8E45A', fontFamily: 'Boogaloo'}).setScale(0.9) 
+      botonCreditos2 = this.add.text(1130, 670, txtcred, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)
       botonCreditos2.setVisible(false);  
       botonCreditos.setInteractive()
       botonCreditos.on('pointerdown', () => {  
@@ -186,16 +145,15 @@ Español1.setVisible(false);
         
                                        this.scene.start('creditos'); } );
       
-      var botonsalirDelJuego = this.add.image(1140, 690, 'botonsalirDelJuego').setScale(0.65) 
-      var botonsalirDelJuego2 = this.add.image(1140, 690, 'botonsalirDelJuego2').setScale(0.65) 
-      botonsalirDelJuego2.setVisible(false);
-      botonsalirDelJuego.setInteractive()
-      botonsalirDelJuego.on('pointerdown', () => {  
+      selector = this.add.text(837, 670, txtsel, { fontSize: '40px', fill: '#E8E45A', fontFamily: 'Boogaloo'}).setScale(0.9) 
+      selector2 = this.add.text(837, 670, txtsel, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)  
+      selector2.setVisible(false);
+      selector.setInteractive()
+      selector.on('pointerdown', () => {  
         if(efsonido === true ){
           BotonSonido = this.sound.add("botonsonido" , {loop: false});
           BotonSonido.play();}
-        Musicamenu.stop();
-                                       this.scene.start('logo'); } );   
+                                       this.scene.launch('selector'); } );   
 
                                 
       botonNuevoJuego.on('pointerover', function (c) {
@@ -216,17 +174,91 @@ Español1.setVisible(false);
       botonCreditos.on('pointerout', function (f) {
       botonCreditos2.setVisible(false)
       });
-      botonsalirDelJuego.on('pointerover', function (f) {
-        botonsalirDelJuego2.setVisible(true)
+      selector.on('pointerover', function (f) {
+        selector2.setVisible(true)
        });
-       botonsalirDelJuego.on('pointerout', function (f) {
-        botonsalirDelJuego2.setVisible(false)
+       selector.on('pointerout', function (f) {
+        selector2.setVisible(false)
         });
 
-      var selector = this.add.image(670, 290, 'tutosi').setScale(0.65).setInteractive();
-      selector.on('pointerdown', () => {
-          this.scene.launch('selector')
-      })
+        Ingles1.on('pointerdown', () => {
+          idioma = 2;
+        });
+        Español1.on('pointerdown', () => {
+          idioma = 1;
+        });
+        Portugues1.on('pointerdown', () => {
+          idioma = 3;
+        })
+  
+    }
+
+    update(){
+      if (idioma === 1){  
+        Ingles.setVisible(false);
+        Ingles1.setVisible(true);
+        Español.setVisible(true);
+        Español1.setVisible(false);
+        Portugues.setVisible(false);
+        Portugues1.setVisible(true);
+        Español.setInteractive();
+        txtnuevo = 'Nuevo Juego';
+        txtsel = 'Elegir Nivel';
+        txtcred = 'Creditos';
+        txtinfo = 'Info';
+        botonNuevoJuego.setText(txtnuevo);
+        botonNuevoJuego2.setText(txtnuevo);
+        botonInfo.setText(txtinfo);
+        botonInfo2.setText(txtinfo);
+        botonCreditos.setText(txtcred);
+        botonCreditos2.setText(txtcred);
+        selector.setText(txtsel);
+        selector2.setText(txtsel);
+      }
+      if (idioma === 2){
+        Ingles.setVisible(true);
+        Ingles1.setVisible(false);
+        Español.setVisible(false);
+        Español1.setVisible(true);
+        Portugues.setVisible(false);
+        Portugues1.setVisible(true);
+        txtnuevo = 'New Game';
+        txtsel = 'Choose Level';
+        txtcred = 'Credits';
+        txtinfo = 'Info';
+        botonNuevoJuego.setText(txtnuevo);
+        botonNuevoJuego2.setText(txtnuevo);
+        botonInfo.setText(txtinfo);
+        botonInfo2.setText(txtinfo);
+        botonCreditos.setText(txtcred);
+        botonCreditos2.setText(txtcred);
+        selector.setText(txtsel);
+        selector2.setText(txtsel);
+       }
+       if (idioma === 3){
+        Portugues.setVisible(false);
+        Portugues.setInteractive()
+        Ingles.setVisible(false);
+        Ingles1.setVisible(true);
+        Español.setVisible(false);
+        Español1.setVisible(true);
+        Portugues.setVisible(true);
+        Portugues1.setVisible(false);
+        txtnuevo = 'Novo Jogo';
+        txtsel = 'Escolha Nivel';
+        txtcred = 'Creditos';
+        txtinfo = 'Info';
+        botonNuevoJuego.setText(txtnuevo);
+        botonNuevoJuego2.setText(txtnuevo);
+        botonInfo.setText(txtinfo);
+        botonInfo2.setText(txtinfo);
+        botonCreditos.setText(txtcred);
+        botonCreditos2.setText(txtcred);
+        selector.setText(txtsel);
+        selector2.setText(txtsel);
+       }
+
+
     }
     
 }
