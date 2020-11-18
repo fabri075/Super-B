@@ -181,6 +181,12 @@ class Scene1 extends Phaser.Scene {
     this.load.image("portuguessi" , "assets/Idiomas/BrasilColor.png");
     this.load.image("portuguesno" , "assets/Idiomas/BrasilNoColor.png");
 
+    //*final victoria
+    this.load.image("Fondovictoria", "assets/FondoVictoria.jpg");
+    this.load.image("Cartelvictoria", "assets/Cartelvictoria.png");
+    this.load.image("Fondoperdiste", "assets/Fondoperdiste.jpg");
+    this.load.image("Cartelperdiste", "assets/Cartelperdiste.png");
+
    
     }
 

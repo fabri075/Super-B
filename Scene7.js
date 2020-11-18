@@ -5,23 +5,34 @@ class Scene7 extends Phaser.Scene {
     }
     
     create(){
-        var Transparencia = this.add.image(400, 300, "transparencia");
+        var Fondoperdiste = this.add.image(635, 380, "Fondoperdiste").setScale(.7);
+        var Cartelperdiste = this.add.image(650, 480, "Cartelperdiste").setScale(.7);
 
-            this.add.image(640, 490, 'menuPausa').setScale(.7).setInteractive({cursor: 'context-menu'})
-            this.add.image(640, 180, 'tituloNivelPerdido').setScale(.6)
-            this.add.image(525, 365, 'neneenfermo').setScale(.6)
-            this.add.image(640, 375, 'neneenfermo').setScale(.8)
-            this.add.image(755, 365, 'neneenfermo').setScale(.6)
-            scorefinaltext = this.add.text(560, 425, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
+
+            if (perder === 0){
+                this.add.image(520, 340, 'hambur').setScale(.6)
+                this.add.image(640, 320, 'hambur').setScale(.8)
+                this.add.image(760, 340, 'hambur').setScale(.6)
+            }
+            if (perder === 1){
+                this.add.image(520, 340, 'neneenfermo').setScale(.6)
+                this.add.image(640, 320, 'hambur').setScale(.8)
+                this.add.image(756, 340,  'hambur').setScale(.6)
+            }
+            if (perder === 2){
+                this.add.image(520, 340,  'neneenfermo').setScale(.6)
+                this.add.image(640, 320, 'hambur').setScale(.8)
+                this.add.image(760, 340, 'neneenfermo').setScale(.6)
+            }
+            scorefinaltext = this.add.text(565, 505, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
             Musicagame.stop();   
             perdersonido = this.sound.add("perdersonido", {loop: false});
             if (efsonido === true){
             perdersonido.play();
             }
-            var botonReintentar1 = this.add.image(643, 510, 'botonReintentar1').setScale(.7)
-            var botonReintentar2 = this.add.image(643, 510, 'botonReintentar2').setScale(.7)
-            text = this.add.text(570, 500, "VOLVER A EMPEZAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
-            text = this.add.text(600, 640, "NIVEL " + nivel, { fontSize: '25px', fill: '#F6DB9D', fontFamily: 'Boogaloo'})
+            var botonReintentar1 = this.add.image(643, 590, 'botonReintentar1').setScale(.7)
+            var botonReintentar2 = this.add.image(643, 590, 'botonReintentar2').setScale(.7)
+            text = this.add.text(570, 580, "VOLVER A EMPEZAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
             botonReintentar2.setVisible(false);
             botonReintentar1.setInteractive();
             botonReintentar1.on('pointerdown', () => {  
@@ -44,9 +55,9 @@ class Scene7 extends Phaser.Scene {
 
     } );
         
-        var menuPrincipal = this.add.image(645, 580, 'botonReintentar1').setScale(.7)
-        var menuPrincipal2 = this.add.image(645, 580, 'botonReintentar2').setScale(.7)
-        text = this.add.text(581, 570, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        var menuPrincipal = this.add.image(645, 660, 'botonReintentar1').setScale(.7)
+        var menuPrincipal2 = this.add.image(645, 660, 'botonReintentar2').setScale(.7)
+        text = this.add.text(581, 650, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
 
         menuPrincipal2.setVisible(false);
         menuPrincipal.setInteractive()

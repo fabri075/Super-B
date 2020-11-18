@@ -4,37 +4,37 @@ class Scene6a extends Phaser.Scene {
     }
     
     create(){
-        var Transparencia = this.add.image(400, 300, "transparencia");
+        var Fondovictoria = this.add.image(600, 500, "Fondovictoria");
+        var Cartelvictoria = this.add.image(650, 500, "Cartelvictoria").setScale(.7);
 
-        this.add.image(640, 490, 'menuPausa').setScale(.7).setInteractive({cursor: 'context-menu'})
-        this.add.image(640, 180, 'tituloGanastefinal').setScale(.7)
+       
+
         if (perder === 0){
-            this.add.image(525, 365,  'neneenfermo').setScale(.6)
-            this.add.image(640, 375, 'neneenfermo').setScale(.8)
-            this.add.image(755, 365,  'neneenfermo').setScale(.6)
+            this.add.image(520, 355,  'hambur').setScale(.8)
+            this.add.image(640, 330, 'hambur').setScale(.9)
+            this.add.image(760, 355,  'hambur').setScale(.8)
         }
         if (perder === 1){
-            this.add.image(525, 365, 'neneenfermo').setScale(.6)
-            this.add.image(640, 375, 'neneenfermo').setScale(.8)
-            this.add.image(755, 365, 'neneenfermo').setScale(.6)
+            this.add.image(520, 355, 'neneenfermo').setScale(.8)
+            this.add.image(640, 330, 'hambur').setScale(.9)
+            this.add.image(760, 355, 'hambur').setScale(.8)
         }
         if (perder === 2){
-            this.add.image(525, 365,  'neneenfermo').setScale(.6)
-            this.add.image(640, 375, 'neneenfermo').setScale(.8)
-            this.add.image(755, 365,  'neneenfermo').setScale(.6)
+            this.add.image(520, 355,  'neneenfermo').setScale(.8)
+            this.add.image(640, 330, 'neneenfermo').setScale(.9)
+            this.add.image(760, 355,  'hambur').setScale(.8)
         }
-        scorefinaltext = this.add.text(560, 425, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
+        scorefinaltext = this.add.text(560, 540, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
         Musicagame.stop();    
         ganarsonido = this.sound.add("ganarsonido", {loop: false});
         if (efsonido === true){
         ganarsonido.play();   
         }
-        text = this.add.text(600, 640, "NIVEL " + nivel, { fontSize: '25px', fill: '#F6DB9D', fontFamily: 'Boogaloo'})
 
     
-    var menuPrincipal = this.add.image(645, 520, 'botonReiniciar1').setScale(.6)
-    var menuPrincipal2 = this.add.image(645, 520, 'botonReiniciar2').setScale(.6)
-    text = this.add.text(581, 510, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
+    var menuPrincipal = this.add.image(645, 640, 'botonReiniciar1').setScale(.6)
+    var menuPrincipal2 = this.add.image(645, 640, 'botonReiniciar2').setScale(.6)
+    text = this.add.text(581, 630, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
 
     menuPrincipal2.setVisible(false);
     menuPrincipal.setInteractive()
