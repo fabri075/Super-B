@@ -19,11 +19,11 @@ class Scene3 extends Phaser.Scene {
         
         {this.add.text(10, 25, 'NIVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
 
-        if(idioma === 2)
+        if(idioma === 3)
         
         {this.add.text(10, 25, 'NÍVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
 
-        if(idioma === 3)
+        if(idioma === 2)
         
         {this.add.text(10, 25, 'LEVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
 
@@ -64,15 +64,15 @@ class Scene3 extends Phaser.Scene {
          cajaDeColision.create(1290, 320, 'barraTransparenteVertical');
         //mesa izquierda y dercha del medio
         if(nivel === 4)
-         {cajaDeColision.create(-400, 360, 'barraTransparente');}//para que no pisen a los niños
+         {cajaDeColision.create(-450, 360, 'barraTransparente');}//para que no pisen a los niños
          //cajaDeColision.create(1700, 360, 'barraTransparente');//para que no pisen a los niños
 
          if(nivel === 5)
-         {cajaDeColision.create(-400, 360, 'barraTransparente');//para que no pisen a los niños
-         cajaDeColision.create(1700, 360, 'barraTransparente');}//para que no pisen a los niños
+         {cajaDeColision.create(-450, 360, 'barraTransparente');//para que no pisen a los niños
+         cajaDeColision.create(1750, 360, 'barraTransparente');}//para que no pisen a los niños
          //mesa derecha y izquierda de abajo
-         cajaDeColision.create(-400, 540, 'barraTransparente');//para que no pisen a los niños
-         cajaDeColision.create(1700, 540, 'barraTransparente');//para que no pisen a los niños
+         cajaDeColision.create(-450, 540, 'barraTransparente');//para que no pisen a los niños
+         cajaDeColision.create(1750, 540, 'barraTransparente');//para que no pisen a los niños
          
         
         

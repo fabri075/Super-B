@@ -171,7 +171,7 @@ class Scene1 extends Phaser.Scene {
       this.load.image('parte2' , 'assets/Cinematica-2.jpg ');
       this.load.image('parte3' , 'assets/Cinematica-3.jpg ');
       this.load.image('informacion', 'assets/Pantallainfo.jpg');
-      this.load.image('informacion2', 'assets/Pantallainfoen.jpg');
+      this.load.image('informacion2', 'assets/PantallainfoEN.jpg');
       this.load.image('informacion3', 'assets/Pantallainfopt.jpg');
       this.load.image('tutorial', 'assets/Preguntatuto.png');
       this.load.image('tutosi', 'assets/Situto.png');
