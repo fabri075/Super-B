@@ -1,3 +1,5 @@
+var situto2;
+var notuto2;
 class Scene10 extends Phaser.Scene {
     constructor() {
       super('tutorial');
@@ -7,11 +9,18 @@ class Scene10 extends Phaser.Scene {
         this.add.image(635, 350, 'parte3').setScale(0.68)
         BotonSonido = this.sound.add("botonsonido" , {loop: false});
         tuto = this.add.image(650, 350, 'tutorial');
-        situto = this.add.image(540, 430, 'tutosi').setScale(1.1).setInteractive({ cursor: 'pointer' });
-        notuto = this.add.image(760, 430, 'tutono').setScale(1.1).setInteractive({ cursor: 'pointer' });
-        
+        situto = this.add.image(540, 430, 'botonChico1').setScale(1.1).setInteractive({ cursor: 'pointer' });
+        notuto = this.add.image(760, 430, 'botonChico1').setScale(1.1).setInteractive({ cursor: 'pointer' });
+        situto2 = this.add.image(540, 430, 'botonChico2').setScale(1.1)
+        notuto2 = this.add.image(760, 430, 'botonChico2').setScale(1.1)
+        situto2.setVisible(false);
+        notuto2.setVisible(false);
+        text = this.add.text(515, 410, "SI", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        text = this.add.text(730, 410, "NO", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+
         situto.on('pointerdown', () => {
             tutorial();
+            
             this.add.image(635, 350, 'pantallatuto').setScale(0.68);
             tuto1 = this.add.image(830, 350, 'tuto1').setScale(0.8);
             avanzar1 = this.add.image(960, 650, 'avanzar1').setScale(0.7).setInteractive({ cursor: 'pointer' });
@@ -70,11 +79,18 @@ class Scene10 extends Phaser.Scene {
         this.add.image(635, 350, 'parte3').setScale(0.68)
         BotonSonido = this.sound.add("botonsonido" , {loop: false});
         tutoBR = this.add.image(650, 350, 'tutorialBR');
-        situto = this.add.image(540, 430, 'tutosi').setScale(1.1).setInteractive({ cursor: 'pointer' });
-        notuto = this.add.image(760, 430, 'tutono').setScale(1.1).setInteractive({ cursor: 'pointer' });
+        situto = this.add.image(540, 430, 'botonChico1').setScale(1.1).setInteractive({ cursor: 'pointer' });
+        notuto = this.add.image(760, 430, 'botonChico1').setScale(1.1).setInteractive({ cursor: 'pointer' });
+        situto2 = this.add.image(540, 430, 'botonChico2').setScale(1.1)
+        notuto2 = this.add.image(760, 430, 'botonChico2').setScale(1.1)
+        situto2.setVisible(false);
+        notuto2.setVisible(false);
+        text = this.add.text(515, 410, "SIM", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        text = this.add.text(730, 410, "NÃO", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
         
         situto.on('pointerdown', () => {
             tutorialBR();
+            
             this.add.image(635, 350, 'pantallatutoBR').setScale(0.68);
             tuto1BR = this.add.image(830, 350, 'tuto1BR').setScale(0.8);
             avanzar1 = this.add.image(960, 650, 'avanzar1').setScale(0.7).setInteractive({ cursor: 'pointer' });
@@ -133,11 +149,18 @@ class Scene10 extends Phaser.Scene {
             this.add.image(635, 350, 'parte3').setScale(0.68)
             BotonSonido = this.sound.add("botonsonido" , {loop: false});
             tutoEN = this.add.image(650, 350, 'tutorialEN');
-            situto = this.add.image(540, 430, 'tutosi').setScale(1.1).setInteractive({ cursor: 'pointer' });
-            notuto = this.add.image(760, 430, 'tutono').setScale(1.1).setInteractive({ cursor: 'pointer' });
+            situto = this.add.image(540, 430, 'botonChico1').setScale(1.1).setInteractive({ cursor: 'pointer' });
+            notuto = this.add.image(760, 430, 'botonChico1').setScale(1.1).setInteractive({ cursor: 'pointer' });
+            situto2 = this.add.image(540, 430, 'botonChico2').setScale(1.1)
+            notuto2 = this.add.image(760, 430, 'botonChico2').setScale(1.1)
+            situto2.setVisible(false);
+            notuto2.setVisible(false);
+            text = this.add.text(515, 400, "YES", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(730, 400, "NO", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
             
             situto.on('pointerdown', () => {
                 tutorialEN();
+                
                 this.add.image(635, 350, 'pantallatutoEN').setScale(0.68);
                 tuto1EN = this.add.image(830, 350, 'tuto1EN').setScale(0.8);
                 avanzar1 = this.add.image(960, 650, 'avanzar1').setScale(0.7).setInteractive({ cursor: 'pointer' });
@@ -191,6 +214,21 @@ class Scene10 extends Phaser.Scene {
                 this.scene.start('nivel1');
             })
             }
+            
+
+            situto.on('pointerover', function (a) {
+                situto2.setVisible(true)
+           });
+           situto.on('pointerout', function (a){
+               situto2.setVisible(false)
+           });
+            notuto.on('pointerover', function (b) {
+                notuto2.setVisible(true)
+           });
+           notuto.on('pointerout', function (b){
+               notuto2.setVisible(false)
+           });
+            
         
         }
     }

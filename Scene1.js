@@ -181,8 +181,8 @@ class Scene1 extends Phaser.Scene {
       this.load.image('tutorial', 'assets/Preguntatuto.png');
       this.load.image('tutosi', 'assets/Situto.png');
       this.load.image('tutono', 'assets/Notuto.png');
-      this.load.image('tuto1', 'assets/botonchico1.png');
-      this.load.image('tuto2', 'assets/botonchico2.png');
+      this.load.image('botonChico1', 'assets/botonchico1.png');
+      this.load.image('botonChico2', 'assets/botonchico2.png');
 
       this.load.image('pantallatuto', 'assets/Pantallatuto.jpg');
       this.load.image('atras1', 'assets/atras1.png');
