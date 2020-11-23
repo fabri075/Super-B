@@ -60,7 +60,9 @@ class Scene6 extends Phaser.Scene {
         
         Musicagame.stop();    
         ganarsonido = this.sound.add("ganarsonido", {loop: false});
+        if(efsonido === true){
         ganarsonido.play();   
+        }
         
         botonReiniciar2.setVisible(false)
         botonReiniciar1.setInteractive()

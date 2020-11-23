@@ -5,7 +5,8 @@ class Scene10 extends Phaser.Scene {
       super('tutorial');
     }
     
-    create(){if (idioma === 1){
+    create(){
+        if (idioma === 1){
         this.add.image(635, 360, 'parte3').setScale(0.68)
         BotonSonido = this.sound.add("botonsonido" , {loop: false});
         tuto = this.add.image(650, 360, 'tutorial');
@@ -15,8 +16,8 @@ class Scene10 extends Phaser.Scene {
         notuto2 = this.add.image(760, 430, 'botonChico2').setScale(1.1)
         situto2.setVisible(false);
         notuto2.setVisible(false);
-        text = this.add.text(515, 410, "SI", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
-        text = this.add.text(730, 410, "NO", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        text = this.add.text(515, 410, " SI", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+        text = this.add.text(730, 410, " NO", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
 
         situto.on('pointerdown', () => {
             tutorial();
@@ -24,6 +25,7 @@ class Scene10 extends Phaser.Scene {
             this.add.image(635, 360, 'pantallatuto').setScale(0.68);
             tuto1 = this.add.image(640, 360, 'tuto1').setScale(0.8);
             avanzar1 = this.add.image(960, 650, 'avanzar1').setScale(0.7).setInteractive({ cursor: 'pointer' });
+            avanzar2 = this.add.image(960, 650, 'avanzar2').setScale(0.7).setVisible(false)
             avanzar1.on('pointerdown', () => {
                 if (tuto1 != null){
                 atras1 = this.add.image(700, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
@@ -161,8 +163,8 @@ class Scene10 extends Phaser.Scene {
             notuto2 = this.add.image(760, 430, 'botonChico2').setScale(1.1)
             situto2.setVisible(false);
             notuto2.setVisible(false);
-            text = this.add.text(515, 400, "YES", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
-            text = this.add.text(730, 400, "NO", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(515, 410, "YES", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(730, 410, " NO", { fontSize: '40px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
             
             situto.on('pointerdown', () => {
                 tutorialEN();

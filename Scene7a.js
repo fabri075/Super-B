@@ -41,12 +41,12 @@ class Scene7a extends Phaser.Scene {
                 text = this.add.text(598, 640, "NÍVEL " + nivel, { fontSize: '25px', fill: '#F6DB9D', fontFamily: 'Boogaloo'})
             }
 
-           
             if (perder === 0){
-                this.add.image(525, 365, 'EstrellaPrendida').setScale(.6)
-                this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
-                this.add.image(755, 365, 'EstrellaPrendida').setScale(.6)
+                this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
+                this.add.image(640, 375, 'EstrellaApagada').setScale(.8)
+                this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
             }
+
             if (perder === 1){
                 this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
                 this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
@@ -57,20 +57,31 @@ class Scene7a extends Phaser.Scene {
                 this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
                 this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
             }
+            if (perder === 3){
+                this.add.image(525, 365,  'EstrellaApagada').setScale(.6)
+                this.add.image(640, 375, 'EstrellaApagada').setScale(.8)
+                this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
+            }
 
+
+            
 
             
 
             Musicagame.stop();   
             perdersonido = this.sound.add("perdersonido", {loop: false});
+            if (efsonido === true){
             perdersonido.play();
+            }
             
 
             botonReintentar2.setVisible(false);
             botonReintentar1.setInteractive();
             botonReintentar1.on('pointerdown', () => {  
             BotonSonido = this.sound.add("botonsonido" , {loop: false});
+            if (efsonido === true){
             BotonSonido.play();
+            }
             this.scene.stop('nivel1');
             this.scene.start('nivel1');
             score = score - 200;

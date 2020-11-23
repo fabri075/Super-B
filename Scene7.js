@@ -46,7 +46,9 @@ class Scene7 extends Phaser.Scene {
             botonReintentar1.setInteractive();
             botonReintentar1.on('pointerdown', () => {  
             BotonSonido = this.sound.add("botonsonido" , {loop: false});
+            if (efsonido === true){
             BotonSonido.play();
+            }
             this.scene.stop('nivel1');
             this.scene.start('nivel1');
             score = 0;
@@ -80,7 +82,9 @@ class Scene7 extends Phaser.Scene {
         menuPrincipal.setInteractive()
         menuPrincipal.on('pointerdown', () => { 
             BotonSonido = this.sound.add("botonsonido" , {loop: false});
+            if (efsonido === true){
         BotonSonido.play();
+            }
         Musicagame.stop();
             this.scene.stop('nivel1');
             this.scene.start('menu');

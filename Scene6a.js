@@ -66,7 +66,9 @@ class Scene6a extends Phaser.Scene {
     menuPrincipal.setInteractive()
     menuPrincipal.on('pointerdown', () => {
         BotonSonido = this.sound.add("botonsonido" , {loop: false});
+        if (efsonido === true){
         BotonSonido.play();
+        }
         Musicagame.stop();
         //ganarsonido.destroy();
         this.scene.stop('nivel1');

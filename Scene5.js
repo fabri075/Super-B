@@ -24,14 +24,14 @@ create() {
         if (idioma === 2)
         {
             this.add.image(640, 200, 'tituloPausaEN').setScale(0.7)
-            text = this.add.text(600, 390, "RESUME", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
-            text = this.add.text(575, 470, "MAIN MENU", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(600, 390, "  RESUME", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(575, 470, "     MAIN MENU", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
         }
         if (idioma === 3)
         {
             this.add.image(640, 200, 'tituloPausa').setScale(0.7)
-            text = this.add.text(600, 390, "RETOMAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
-            text = this.add.text(575, 470, "MENU PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(600, 390, " RETOMAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
+            text = this.add.text(575, 470, " MENU PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
         }
   
     reanudarPausa2.setVisible(false)
