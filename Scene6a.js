@@ -16,29 +16,12 @@ class Scene6a extends Phaser.Scene {
 
 
 
-       
-
-        if (perder === 0){
-            this.add.image(525, 365, 'EstrellaPrendida').setScale(.6)
-            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
-            this.add.image(755, 365, 'EstrellaPrendida').setScale(.6)
-        }
-        if (perder === 1){
-            this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
-            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
-            this.add.image(755, 365,  'EstrellaPrendida').setScale(.6)
-        }
-        if (perder === 1 && tiempoNivel < 10 ){
-            this.add.image(525, 365,  'EstrellaApagada').setScale(.6)
-            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
-            this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
-        }
         if ( idioma === 1){
-            scorefinaltext = this.add.text(563, 540, "Puntos " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
+            scorefinaltext = this.add.text(563, 540, "Puntos: " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
             if ( idioma === 3){
-                scorefinaltext = this.add.text(563, 540, "Pontos " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
+                scorefinaltext = this.add.text(563, 540, "Pontos: " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
                 if ( idioma === 2){
-                    scorefinaltext = this.add.text(563, 540, "Points " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
+                    scorefinaltext = this.add.text(563, 540, "Points: " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
         Musicagame.stop();    
         ganarsonido = this.sound.add("ganarsonido", {loop: false});
         if (efsonido === true){
