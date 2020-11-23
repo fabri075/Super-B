@@ -17,15 +17,15 @@ class Scene3 extends Phaser.Scene {
         this.add.image(640, 45, 'uiCont').setScale(0.695, 0.67)
         if(idioma === 1)
         
-        {this.add.text(10, 25, 'NIVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
+        {this.add.text(10, 25, 'NIVEL', { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.85)}
 
         if(idioma === 3)
         
-        {this.add.text(10, 25, 'NÍVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
+        {this.add.text(10, 25, 'NÍVEL', { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.85)}
 
         if(idioma === 2)
         
-        {this.add.text(10, 25, 'LEVEL', { fontSize: '40px', fill: '#FFFFFF', fontFamily: 'Boogaloo'}).setScale(0.85)}
+        {this.add.text(10, 25, 'LEVEL', { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.85)}
 
 
 
@@ -676,9 +676,9 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
 
         // Ponemos el puntaje en pantalla
         //var scoreimage = this.add.image(640, 26, 'puntaje').setScale(0.7)
-        scoreText = this.add.text(670, 29, score, { fontSize: '26px', fill: 'purple', fontFamily: 'Comic Sans MS'});
-        tiempoText = this.add.text(250, 29, 'Tiempo: ' + tiempoInicial, { fontSize: '26px', fill: 'purple', fontFamily: 'Comic Sans MS'});
-        levelText = this.add.text(110, 29, nivel + '' , { fontSize: '26px', fill: 'purple', fontFamily: 'Comic Sans MS'});
+        scoreText = this.add.text(670, 29, score, { fontSize: '26px', fill: 'purple', fontFamily: 'Boogaloo'});
+        tiempoText = this.add.text(250, 29, 'Tiempo: ' + tiempoInicial, { fontSize: '26px', fill: 'purple', fontFamily: 'Boogaloo'});
+        levelText = this.add.text(110, 29, nivel + '' , { fontSize: '26px', fill: 'purple', fontFamily: 'Boogaloo'});
         //mochila
        // this.add.image(460, 120, 'puntos').setScale(0.3,0.5)
         
@@ -1082,7 +1082,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
     }}}
      
     totalBuenas = contadorBuenas;
-    cantMochila = this.add.text(950, 29, mochila, { fontSize: '26px', fill: 'purple', fontFamily: 'Comic Sans MS'});
+    cantMochila = this.add.text(950, 29, mochila, { fontSize: '26px', fill: 'purple', fontFamily: 'Boogaloo'});
 
     }
 

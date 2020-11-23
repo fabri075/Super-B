@@ -25,7 +25,7 @@ create() {
     }
     var menuPrincipal =  this.add.image(862, 620, 'botonReiniciar1').setScale(.7)
     var menuPrincipal2 =  this.add.image(862, 620, 'botonReiniciar2').setScale(.7)
-    textomenu = this.add.text(775, 603, txtmenu, {fontSize: '28px', fill: '#FFFFFF', fontFamily: 'Boogaloo'});
+    textomenu = this.add.text(775, 603, txtmenu, {fontSize: '28px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
     menuPrincipal2.setVisible(false)
         menuPrincipal.setInteractive()
         menuPrincipal.on('pointerdown', () => {

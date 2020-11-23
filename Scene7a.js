@@ -18,7 +18,7 @@ class Scene7a extends Phaser.Scene {
 
             if (idioma === 1)
             {
-                this.add.image(640, 180, 'tituloNivelPerdido').setScale(0.7)
+                this.add.image(640, 180, 'tituloNivelPerdido').setScale(0.6)
                 scorefinaltext = this.add.text(560, 425, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
                 text = this.add.text(581, 570, "MENÚ PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
                 text = this.add.text(595, 500, "REINTENTAR", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
@@ -26,7 +26,7 @@ class Scene7a extends Phaser.Scene {
             };
             if (idioma === 2)
             {
-                this.add.image(640, 180, 'tituloNivelPerdidoEN').setScale(0.7)
+                this.add.image(640, 180, 'tituloNivelPerdidoEN').setScale(0.6)
                 scorefinaltext = this.add.text(560, 425, "Points " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
                 text = this.add.text(581, 570, "MAIN MENU", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
                 text = this.add.text(595, 500, "TRY AGAIN", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
@@ -34,7 +34,7 @@ class Scene7a extends Phaser.Scene {
             }
             if (idioma === 3)
             {
-                this.add.image(640, 180, 'tituloNivelPerdidoBR').setScale(0.7)
+                this.add.image(640, 180, 'tituloNivelPerdidoBR').setScale(0.6)
                 scorefinaltext = this.add.text(560, 425, "Pontos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});
                 text = this.add.text(581, 570, "MENU PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
                 text = this.add.text(580, 500, "TENTE NOVAMENTE", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'Boogaloo'})
@@ -82,7 +82,7 @@ class Scene7a extends Phaser.Scene {
             totalBuenas = 0;
             tiempoInicial = 30;
             contador = 1;
-            pilaCreada= false;
+            pilaCreada = false;
             contadorPilas = 1;
 
     } );

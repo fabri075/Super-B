@@ -23,7 +23,7 @@ class Scene9 extends Phaser.Scene {
         }    
         var menuPrincipal =  this.add.image(730, 675, 'botonReiniciar1').setScale(.7)
         var menuPrincipal2 =  this.add.image(730, 675, 'botonReiniciar2').setScale(.7)
-        this.add.text(640, 658, txtmenui, {fontSize: '28px', fill: '#FFFFFF', fontFamily: 'Boogaloo'});
+        this.add.text(640, 658, txtmenui, {fontSize: '28px', fill: '#6F0C49', fontFamily: 'Boogaloo'});
         menuPrincipal2.setVisible(false)
         menuPrincipal.setInteractive()
         menuPrincipal.on('pointerdown', () => {

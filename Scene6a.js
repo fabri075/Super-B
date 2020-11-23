@@ -34,11 +34,11 @@ class Scene6a extends Phaser.Scene {
             this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
         }
         if ( idioma === 1){
-            scorefinaltext = this.add.text(563, 540, "Puntos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+            scorefinaltext = this.add.text(563, 540, "Puntos " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
             if ( idioma === 3){
-                scorefinaltext = this.add.text(563, 540, "Pontos " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+                scorefinaltext = this.add.text(563, 540, "Pontos " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
                 if ( idioma === 2){
-                    scorefinaltext = this.add.text(563, 540, "Points " + score, { fontSize: '40px', fill: '#02854F', fontFamily: 'Boogaloo'});}
+                    scorefinaltext = this.add.text(563, 540, "Points " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
         Musicagame.stop();    
         ganarsonido = this.sound.add("ganarsonido", {loop: false});
         if (efsonido === true){
