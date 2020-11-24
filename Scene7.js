@@ -98,6 +98,7 @@ class Scene7 extends Phaser.Scene {
             tiempoInicial = 30;
             vidas = 3;
             contador = 1;
+            nivel = 1;
            
     } );
 

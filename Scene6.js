@@ -101,7 +101,7 @@ class Scene6 extends Phaser.Scene {
         tiempoInicial = 30;
         contador = 1;
         pilaCreada= false;
-
+        nivel = 1;
         
         
 } );
@@ -127,6 +127,7 @@ class Scene6 extends Phaser.Scene {
         totalBuenas = 0;
         tiempoInicial = 30;
         contador = 1;
+        nivel = 1;
         
     } );
 
