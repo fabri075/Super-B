@@ -57,7 +57,7 @@ class Scene7a extends Phaser.Scene {
                 this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
                 this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
             }
-            if (perder === 3){
+            if (perder >= 3){
                 this.add.image(525, 365,  'EstrellaApagada').setScale(.6)
                 this.add.image(640, 375, 'EstrellaApagada').setScale(.8)
                 this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
