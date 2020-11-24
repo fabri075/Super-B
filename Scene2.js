@@ -23,7 +23,7 @@ class Scene2 extends Phaser.Scene {
     }
 
     create() {
-
+      
       this.add.image(650, 350, 'menu').setScale(0.7)
       Español1 = this.add.image(90, 670, "españolno").setScale(.5).setInteractive(); 
       Español = this.add.image(90, 670, "españolsi" ).setScale(.5).setInteractive();
@@ -121,6 +121,7 @@ class Scene2 extends Phaser.Scene {
             BotonSonido = this.sound.add("botonsonido" , {loop: false});
             BotonSonido.play();}
             vidas = 3;
+            nivel = 1;
                                        this.scene.start('cinematica');
                                        this.scene.pause('menu')
                                        } );
@@ -195,7 +196,7 @@ class Scene2 extends Phaser.Scene {
         Portugues1.on('pointerdown', () => {
           idioma = 3;
         })
-  
+        
     }
 
     update(){
