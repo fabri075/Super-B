@@ -121,8 +121,8 @@ class Scene2 extends Phaser.Scene {
             BotonSonido = this.sound.add("botonsonido" , {loop: false});
             BotonSonido.play();}
             vidas = 3;
-            nivel = 1;
-            contadorPilas = 2;
+           // nivel = 1;
+            contadorPilas = 1;
                                        this.scene.start('cinematica');
                                        this.scene.pause('menu')
                                        } );
