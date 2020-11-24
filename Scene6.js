@@ -41,7 +41,21 @@ class Scene6 extends Phaser.Scene {
             text = this.add.text(580, 570, "MENU PRINCIPAL", { fontSize: '20px', fill: '#6F0C49', fontFamily: 'BOOGALOO'})
         }
 
-
+        if (perder === 0){
+            this.add.image(525, 365, 'EstrellaPrendida').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365, 'EstrellaPrendida').setScale(.6)
+        }
+        if (perder === 1){
+            this.add.image(525, 365, 'EstrellaApagada').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365,  'EstrellaPrendida').setScale(.6)
+        }
+        if (perder === 1 && tiempoNivel < 10 ){
+            this.add.image(525, 365,  'EstrellaApagada').setScale(.6)
+            this.add.image(640, 375, 'EstrellaPrendida').setScale(.8)
+            this.add.image(755, 365, 'EstrellaApagada').setScale(.6)
+        }
         
         
         Musicagame.stop();    
@@ -87,7 +101,7 @@ class Scene6 extends Phaser.Scene {
         tiempoInicial = 30;
         contador = 1;
         pilaCreada= false;
-        nivel = 1;
+       // nivel = 1;
         contadorPilas = 1;
         
         
