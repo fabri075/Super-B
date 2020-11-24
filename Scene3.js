@@ -357,6 +357,9 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
          
 
          if (nivel === 1){
+            if(contadorPilas === 0){
+                contadorPilas = 1;
+            }
                                         //mesa abajo izquierda
              //izquierda
              ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
@@ -373,7 +376,11 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
              ham6 = hamburgesas.create(1205, 620, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
             tiempoInicial = 0;
 
-        }else{ if(nivel === 2){                          //mesa abajo izquierda
+        }else{ if(nivel === 2){  
+            if(contadorPilas === 0){
+                contadorPilas = 1;
+            }
+                                //mesa abajo izquierda
             //izquierda
             ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
             //medio
@@ -416,6 +423,9 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             siPila3.alpha = 0.5
 
         }else{ if ( nivel === 3){
+            if(contadorPilas === 0){
+                contadorPilas = 1;
+            }
                           //mesa abajo izquierda
             //izquierda
             ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
@@ -465,7 +475,11 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             siPila1.alpha = 0.5
             siPila2.alpha = 0.5
             siPila3.alpha = 0.5
-        }  else {  if ( nivel === 4 ) {                 //mesa abajo izquierda
+        }  else {  if ( nivel === 4 ) {   
+            if(contadorPilas === 0){
+                contadorPilas = 1;
+            }
+                        //mesa abajo izquierda
             //izquierda
             ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
             //medio
@@ -522,6 +536,9 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             siPila2.alpha = 0.5
             siPila3.alpha = 0.5
         } else { 
+            if(contadorPilas === 0){
+                contadorPilas = 1;
+            }
                       //mesa abajo izquierda
             //izquierda
             ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
