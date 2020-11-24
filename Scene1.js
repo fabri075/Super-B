@@ -219,6 +219,17 @@ class Scene1 extends Phaser.Scene {
     }
 
     create() {
+      botonNuevoJuego = this.add.text(580, 670, txtnuevo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)
+        botonNuevoJuego2 = this.add.text(580, 670, txtnuevo, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9) 
+
+        botonInfo = this.add.text(950, 670, txtinfo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)
+      botonInfo2 = this.add.text(950, 670, txtinfo, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9)
+
+      botonCreditos = this.add.text(1130, 670, txtcred, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9) 
+      botonCreditos2 = this.add.text(1130, 670, txtcred, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9)
+
+      selector = this.add.text(757, 670, txtsel, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9) 
+      selector2 = this.add.text(757, 670, txtsel, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9)
  
       var logo = this.add.sprite(550, 280, 'logounraf').setScale(4)
       this.anims.create({

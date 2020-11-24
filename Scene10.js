@@ -28,8 +28,8 @@ class Scene10 extends Phaser.Scene {
             avanzar2 = this.add.image(960, 650, 'avanzar2').setScale(0.7).setVisible(false)
             avanzar1.on('pointerdown', () => {
                 if (tuto1 != null){
-                atras1 = this.add.image(700, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
-                atras2 = this.add.image(700, 650, 'atras2').setScale(0.7).setVisible(false);
+                atras1 = this.add.image(275, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
+                atras2 = this.add.image(275, 650, 'atras2').setScale(0.7).setVisible(false);
                 tuto1.destroy();
                 tuto1 = null;    
                 tuto2 = this.add.image(640, 360, 'tuto2').setScale(0.8);
@@ -129,8 +129,8 @@ class Scene10 extends Phaser.Scene {
             avanzar2 = this.add.image(960, 650, 'avanzar2').setScale(0.7).setVisible(false)
             avanzar1.on('pointerdown', () => {
                 if (tuto1BR != null){
-                atras1 = this.add.image(700, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
-                atras2 = this.add.image(700, 650, 'atras2').setScale(0.7).setVisible(false);
+                atras1 = this.add.image(275, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
+                atras2 = this.add.image(275, 650, 'atras2').setScale(0.7).setVisible(false);
                 tuto1BR.destroy();
                 tuto1BR = null;    
                 tuto2BR = this.add.image(640, 360, 'tuto2BR').setScale(0.8);
@@ -217,8 +217,8 @@ class Scene10 extends Phaser.Scene {
                 avanzar2 = this.add.image(960, 650, 'avanzar2').setScale(0.7).setVisible(false)
                 avanzar1.on('pointerdown', () => {
                     if (tuto1EN != null){
-                    atras1 = this.add.image(700, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
-                    atras2 = this.add.image(700, 650, 'atras2').setScale(0.7).setVisible(false);
+                    atras1 = this.add.image(275, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
+                    atras2 = this.add.image(275, 650, 'atras2').setScale(0.7).setVisible(false);
                     tuto1EN.destroy();
                     tuto1EN = null;    
                     tuto2EN = this.add.image(640, 360, 'tuto2EN').setScale(0.8);
