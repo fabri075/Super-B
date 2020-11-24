@@ -38,12 +38,14 @@ class Scene10 extends Phaser.Scene {
                     
                     tuto2.destroy();
                     tuto2 = null; 
-                    tuto3 = this.add.image(640, 360, 'tuto3').setScale(0.8);    
+                    tuto3 = this.add.image(640, 360, 'tuto3').setScale(0.8);
+                    atras1.setVisible(true);    
                 }
                 else {if(tuto3 != null){
                     tuto3.destroy();
                     tuto3 = null; 
-                    tuto4 = this.add.image(640, 360, 'tuto4').setScale(0.8);  
+                    tuto4 = this.add.image(640, 360, 'tuto4').setScale(0.8);
+                    atras1.setVisible(true);  
                 }
                 else{
                     this.scene.start('nivel1');
@@ -52,10 +54,10 @@ class Scene10 extends Phaser.Scene {
             }
                 atras1.on('pointerdown', () => {
                     if(tuto2 != null){
-                        atras1.destroy();
-                        atras1 = null;
-                        atras2 = null;
-                        tuto2EN.destroy();
+                        atras1.setInteractive(false);
+                        atras1.setVisible(false);
+                        
+                        
                         tuto2.destroy();
                         tuto2 = null; 
                         tuto1 = this.add.image(640, 360, 'tuto1').setScale(0.8);  
@@ -63,16 +65,41 @@ class Scene10 extends Phaser.Scene {
                     else {if(tuto3 != null){
                         tuto3.destroy();
                         tuto3 = null; 
-                        tuto2 = this.add.image(640, 360, 'tuto2').setScale(0.8); 
+                        tuto2 = this.add.image(640, 360, 'tuto2').setScale(0.8);
+                        atras1.setVisible(true); 
+                        atras1.setInteractive(true);
                     }
                     else {if(tuto4 != null){
                         tuto4.destroy();
                         tuto4 = null; 
-                        tuto3 = this.add.image(640, 360, 'tuto3').setScale(0.8);  
+                        tuto3 = this.add.image(640, 360, 'tuto3').setScale(0.8); 
+                        atras1.setVisible(true); 
+                        atras1.setInteractive(true);
                     }}
-                }      
+                } 
+                
                 })
+                atras1.on('pointerover', function (c) {
+                    atras2.setVisible(true)
+                  });
+                  atras1.on('pointerout', function (c){
+                    atras2.setVisible(false)
+                });
+                
             })
+        
+        
+            avanzar1.on('pointerover', function (c) {
+                avanzar2.setVisible(true)
+              });
+              avanzar1.on('pointerout', function (c){
+                avanzar2.setVisible(false)
+            });
+            
+
+            
+        
+        
         })
         notuto.on('pointerdown', () => {
             tutorial();
@@ -99,6 +126,7 @@ class Scene10 extends Phaser.Scene {
             this.add.image(635, 360, 'pantallatuto').setScale(0.68);
             tuto1BR = this.add.image(640, 360, 'tuto1BR').setScale(0.8);
             avanzar1 = this.add.image(960, 650, 'avanzar1').setScale(0.7).setInteractive({ cursor: 'pointer' });
+            avanzar2 = this.add.image(960, 650, 'avanzar2').setScale(0.7).setVisible(false)
             avanzar1.on('pointerdown', () => {
                 if (tuto1BR != null){
                 atras1 = this.add.image(700, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
@@ -125,10 +153,8 @@ class Scene10 extends Phaser.Scene {
             }
                 atras1.on('pointerdown', () => {
                     if(tuto2BR != null){
-                        atras1.destroy();
-                        atras1 = null;
-                        atras2 = null;
-                        tuto2EN.destroy();
+                        atras1.setInteractive(false);
+                        atras1.setVisible(false);
                         tuto2BR.destroy();
                         tuto2BR = null; 
                         tuto1BR = this.add.image(640, 360, 'tuto1BR').setScale(0.8);  
@@ -137,15 +163,31 @@ class Scene10 extends Phaser.Scene {
                         tuto3BR.destroy();
                         tuto3BR = null; 
                         tuto2BR = this.add.image(640, 360, 'tuto2BR').setScale(0.8); 
+                        atras1.setVisible(true); 
+                        atras1.setInteractive(true);
                     }
                     else {if(tuto4BR != null){
                         tuto4BR.destroy();
                         tuto4BR = null; 
                         tuto3BR = this.add.image(640, 360, 'tuto3BR').setScale(0.8);  
+                        atras1.setVisible(true); 
+                        atras1.setInteractive(true);
                     }}
                 }      
                 })
+                atras1.on('pointerover', function (c) {
+                    atras2.setVisible(true)
+                  });
+                  atras1.on('pointerout', function (c){
+                    atras2.setVisible(false)
+                });
             })
+            avanzar1.on('pointerover', function (c) {
+                avanzar2.setVisible(true)
+              });
+              avanzar1.on('pointerout', function (c){
+                avanzar2.setVisible(false)
+            });
         })
         notuto.on('pointerdown', () => {
             tutorialBR();
@@ -172,6 +214,7 @@ class Scene10 extends Phaser.Scene {
                 this.add.image(635, 360, 'pantallatuto').setScale(0.68);
                 tuto1EN = this.add.image(640, 360, 'tuto1EN').setScale(0.8);
                 avanzar1 = this.add.image(960, 650, 'avanzar1').setScale(0.7).setInteractive({ cursor: 'pointer' });
+                avanzar2 = this.add.image(960, 650, 'avanzar2').setScale(0.7).setVisible(false)
                 avanzar1.on('pointerdown', () => {
                     if (tuto1EN != null){
                     atras1 = this.add.image(700, 650, 'atras1').setScale(0.7).setInteractive({ cursor: 'pointer' });
@@ -198,8 +241,8 @@ class Scene10 extends Phaser.Scene {
                 }
                     atras1.on('pointerdown', () => {
                         if(tuto2EN != null){
-                            atras1.destroy();
-                            atras1 = null;
+                            atras1.setInteractive(false);
+                        atras1.setVisible(false);
                             atras2.destroy();
                             atras2 = null;
                             tuto2EN.destroy();
@@ -210,15 +253,31 @@ class Scene10 extends Phaser.Scene {
                             tuto3EN.destroy();
                             tuto3EN = null; 
                             tuto2EN = this.add.image(640, 360, 'tuto2EN').setScale(0.8); 
+                            atras1.setVisible(true); 
+                        atras1.setInteractive(true);
                         }
                         else {if(tuto4EN != null){
                             tuto4EN.destroy();
                             tuto4EN = null; 
-                            tuto3EN = this.add.image(640, 360, 'tuto3EN').setScale(0.8);  
+                            tuto3EN = this.add.image(640, 360, 'tuto3EN').setScale(0.8); 
+                            atras1.setVisible(true); 
+                        atras1.setInteractive(true); 
                         }}
                     }      
                     })
+                    atras1.on('pointerover', function (c) {
+                        atras2.setVisible(true)
+                      });
+                      atras1.on('pointerout', function (c){
+                        atras2.setVisible(false)
+                    });
                 })
+                avanzar1.on('pointerover', function (c) {
+                    avanzar2.setVisible(true)
+                  });
+                  avanzar1.on('pointerout', function (c){
+                    avanzar2.setVisible(false)
+                });
             })
             notuto.on('pointerdown', () => {
                 tutorialEN();
@@ -240,8 +299,9 @@ class Scene10 extends Phaser.Scene {
                notuto2.setVisible(false)
            });
             
-        
+           
         }
+        
     }
     function tutorial(){
         if(efsonido === true){

@@ -112,8 +112,8 @@ class Scene2 extends Phaser.Scene {
           efsonido = true;
           });
         }
-        botonNuevoJuego = this.add.text(650, 670, txtnuevo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)
-        botonNuevoJuego2 = this.add.text(650, 670, txtnuevo, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9) 
+        botonNuevoJuego = this.add.text(580, 670, txtnuevo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)
+        botonNuevoJuego2 = this.add.text(580, 670, txtnuevo, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9) 
         botonNuevoJuego2.setVisible(false);
         botonNuevoJuego.setInteractive();
         botonNuevoJuego.on('pointerdown', () => { Musicamenu.stop();
@@ -125,8 +125,8 @@ class Scene2 extends Phaser.Scene {
                                        this.scene.pause('menu')
                                        } );
       
-      botonInfo = this.add.text(1030, 670, txtinfo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)
-      botonInfo2 = this.add.text(1030, 670, txtinfo, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9)  
+      botonInfo = this.add.text(950, 670, txtinfo, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9)
+      botonInfo2 = this.add.text(950, 670, txtinfo, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9)  
       botonInfo2.setVisible(false);
       botonInfo.setInteractive()
       botonInfo.on('pointerdown', () => {
@@ -146,8 +146,8 @@ class Scene2 extends Phaser.Scene {
         
                                        this.scene.start('creditos'); } );
       
-      selector = this.add.text(837, 670, txtsel, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9) 
-      selector2 = this.add.text(837, 670, txtsel, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9)  
+      selector = this.add.text(757, 670, txtsel, { fontSize: '40px', fill: '#F79D23', fontFamily: 'Boogaloo'}).setScale(0.9) 
+      selector2 = this.add.text(757, 670, txtsel, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'}).setScale(0.9)  
       selector2.setVisible(false);
       selector.setInteractive()
       selector.on('pointerdown', () => {  
@@ -210,7 +210,7 @@ class Scene2 extends Phaser.Scene {
         txtnuevo = 'Nuevo Juego';
         txtsel = 'Elegir Nivel';
         txtcred = 'Créditos';
-        txtinfo = 'Info';
+        txtinfo = 'Información';
         botonNuevoJuego.setText(txtnuevo);
         botonNuevoJuego2.setText(txtnuevo);
         botonInfo.setText(txtinfo);
@@ -230,7 +230,7 @@ class Scene2 extends Phaser.Scene {
         txtnuevo = 'New Game';
         txtsel = 'Choose Level';
         txtcred = 'Credits';
-        txtinfo = 'Info';
+        txtinfo = 'Information';
         botonNuevoJuego.setText(txtnuevo);
         botonNuevoJuego2.setText(txtnuevo);
         botonInfo.setText(txtinfo);
@@ -252,7 +252,7 @@ class Scene2 extends Phaser.Scene {
         txtnuevo = 'Novo Jogo';
         txtsel = 'Escolha Nivel';
         txtcred = 'Créditos';
-        txtinfo = 'Info';
+        txtinfo = 'informação';
         botonNuevoJuego.setText(txtnuevo);
         botonNuevoJuego2.setText(txtnuevo);
         botonInfo.setText(txtinfo);

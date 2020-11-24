@@ -395,7 +395,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             //derecha
             ham9 = hamburgesas.create(1170, 200, 'hamb').setScale(.9).setTint(hamburguesa9).setInteractive({ cursor: 'pointer' })
             //hamburguesa extra en la cocina
-            hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
+           // hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
             lentes = hamburgesas.create(1100, 45, 'lenteshud').setScale(.7).setInteractive({ cursor: 'pointer' }).setVisible(true)
             lentes.alpha = 0.5
             lentes.disableInteractive();
@@ -447,7 +447,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             ham12 = hamburgesas.create(245, 200, 'hamb').setScale(.9).setTint(hamburguesa12).setInteractive({ cursor: 'pointer' })
             
             //hamburguesa extra en la cocina
-            hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
+           // hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
             lentes = hamburgesas.create(1100, 45, 'lenteshud').setScale(.7).setInteractive({ cursor: 'pointer' }).setVisible(true)
             lentes.alpha = 0.5
             lentes.disableInteractive();
@@ -503,7 +503,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             //derecha
             ham15 = hamburgesas.create(245, 450, 'hamb').setScale(.95).setTint(hamburguesa15).setInteractive({ cursor: 'pointer' })
                 //hamburguesa extra en la cocina
-            hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
+           // hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
             lentes = hamburgesas.create(1100, 45, 'lenteshud').setScale(0.7).setInteractive({ cursor: 'pointer' }).setVisible(true)
             lentes.alpha = 0.5
             lentes.disableInteractive();
@@ -569,7 +569,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             ham18 = hamburgesas.create(1205, 450, 'hamb').setScale(.95).setTint(hamburguesa18).setInteractive({ cursor: 'pointer' })
             
                 //hamburguesa extra en la cocina
-            hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
+           // hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
             lentes = hamburgesas.create(1100, 45, 'lenteshud').setScale(0.7).setInteractive({ cursor: 'pointer' }).setVisible(true)
             lentes.alpha = 0.5
             lentes.disableInteractive();
@@ -1103,11 +1103,11 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
         };
 
         // Spawn hamburguesa extra
-        if(contadorMalas === 2 && mochila === 1 && cont === 1 && nivel === 2){
-            hamExtra.setVisible(true);
+      //  if(contadorMalas === 2 && mochila === 1 && cont === 1 && nivel === 2){
+           // hamExtra.setVisible(true);
             //agarrarExtra();
-            cont++;       
-        }
+           // cont++;       
+      //  }
 
         //Puntaje Alto
         if (score > puntajeMasAlto){
@@ -1246,7 +1246,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
         var distancia8 = Phaser.Math.Distance.Between(ham7.x, ham7.y, target.x, target.y);
         var distancia9 = Phaser.Math.Distance.Between(ham8.x, ham8.y, target.x, target.y);
         var distancia10 = Phaser.Math.Distance.Between(ham9.x, ham9.y, target.x, target.y);
-        var distancia11 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);
+       // var distancia11 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);
     }else{ if ( nivel === 3 ){
           var distance = Phaser.Math.Distance.Between(jugador.x, jugador.y, target.x, target.y);
         var distancia2 = Phaser.Math.Distance.Between(ham1.x, ham1.y, target.x, target.y);
@@ -1261,7 +1261,8 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
         var distancia11 = Phaser.Math.Distance.Between(ham10.x, ham10.y, target.x, target.y);
         var distancia12 = Phaser.Math.Distance.Between(ham11.x, ham11.y, target.x, target.y);
         var distancia13 = Phaser.Math.Distance.Between(ham12.x, ham12.y, target.x, target.y);
-        var distancia14 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);} 
+       // var distancia14 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);
+    } 
         else { if ( nivel === 4){
             var distance = Phaser.Math.Distance.Between(jugador.x, jugador.y, target.x, target.y);
             var distancia2 = Phaser.Math.Distance.Between(ham1.x, ham1.y, target.x, target.y);
@@ -1279,7 +1280,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             var distancia14 = Phaser.Math.Distance.Between(ham13.x, ham13.y, target.x, target.y);
             var distancia15 = Phaser.Math.Distance.Between(ham14.x, ham14.y, target.x, target.y);
             var distancia16 = Phaser.Math.Distance.Between(ham15.x, ham15.y, target.x, target.y);
-            var distancia17 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);
+           // var distancia17 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);
         } else{
             var distance = Phaser.Math.Distance.Between(jugador.x, jugador.y, target.x, target.y);
             var distancia2 = Phaser.Math.Distance.Between(ham1.x, ham1.y, target.x, target.y);
@@ -1300,7 +1301,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             var distancia17 = Phaser.Math.Distance.Between(ham16.x, ham16.y, target.x, target.y);
             var distancia18 = Phaser.Math.Distance.Between(ham17.x, ham17.y, target.x, target.y);
             var distancia19 = Phaser.Math.Distance.Between(ham18.x, ham18.y, target.x, target.y);
-            var distancia20 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);
+           // var distancia20 = Phaser.Math.Distance.Between(hamExtra.x, hamExtra.y, target.x, target.y);
         }}}}
         
 
@@ -1453,11 +1454,11 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
         }
 
 
-        if (distancia20 < 9)
-        {
-            this.physics.add.overlap(jugador, hamExtra, agarrarExtra(jugador, hamExtra), null, this);
+       // if (distancia20 < 9)
+      //  {
+           // this.physics.add.overlap(jugador, hamExtra, agarrarExtra(jugador, hamExtra), null, this);
             
-        }
+     //   }
 
         
 
@@ -1810,7 +1811,7 @@ function agarrarbuena(bob, buena){
 function agarrarExtra(bob, extra){    
     target.x = jugador.x;
     target.y = jugador.y;
-    hamExtra.disableBody(true,true);
+   // hamExtra.disableBody(true,true);
     //extra.setVisible(false);
     mochila++;
     cont = 1;
