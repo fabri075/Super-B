@@ -25,10 +25,10 @@ class Scene6a extends Phaser.Scene {
                 scorefinaltext = this.add.text(563, 540, "Pontos " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
                 if ( idioma === 2){
                     scorefinaltext = this.add.text(563, 540, "Points " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
-        Musicagame.stop();    
-        ganarsonido = this.sound.add("ganarsonido", {loop: false});
+        Musicagame.stop();  
+        ganarfinal = this.sound.add("ganarfinal" , {loop: false});
         if (efsonido === true){
-        ganarsonido.play();   
+        ganarfinal.play();   
         }
 
     

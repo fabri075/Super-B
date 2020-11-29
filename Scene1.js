@@ -86,6 +86,8 @@ class Scene1 extends Phaser.Scene {
       this.load.audio("cinematica", "assets/musicaysonidos/Cinematica.mp3");
       this.load.audio("pasarhoja", "assets/musicaysonidos/Pageskip.mp3");
       this.load.audio("musicarapida", "assets/musicaysonidos/Musicajuego2.mp3")
+      this.load.audio("risavillano", "assets/musicaysonidos/risavillano1.mp3")
+      this.load.audio("ganarfinal", "assets/musicaysonidos/winfinal.mp3")
       
     this.load.image("musicaSI", "assets/botonPausaMusica1.png");
     this.load.image("musicaNO", "assets/botonPausaMusica2.png");
@@ -95,7 +97,7 @@ class Scene1 extends Phaser.Scene {
     //TUTORIALES IDIOMAS ALTERNATIVOS
     this.load.image('tuto1BR', 'assets/Tutorial-1BR.png');
     this.load.image('tuto2BR', 'assets/Tutorial-2BR.png');
-    this.load.image('tuto3BR', 'assets/Tutorial-3BR.png');
+    this.load.image('tuto3BR', 'assets/Tutorial-3BR.png');  
     this.load.image('tuto4BR', 'assets/Tutorial-4BR.png');
 
     this.load.image('tuto1EN', 'assets/Tutorial-1EN.png');
@@ -126,6 +128,7 @@ class Scene1 extends Phaser.Scene {
       this.load.image('DerIzqInvisible' , 'assets/DerIzqInvisible.png ');
       this.load.image('cajaInvisible' , 'assets/cajaInvisible.png ');
       this.load.image('barraTransparente' , 'assets/barraTransparente.png ');
+      this.load.image('barraTransparente2' , 'assets/barraTransparente2.png ');
       this.load.image('barraTransparenteVertical' , 'assets/barraTransparenteVertical.png ');
 
       //Objetos de escenario

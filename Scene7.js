@@ -25,13 +25,13 @@ class Scene7 extends Phaser.Scene {
             if ( idioma === 3){
                 scorefinaltext = this.add.text(563, 525, "Pontos: " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
                 if ( idioma === 2){
-                    scorefinaltext = this.add.text(563, 525, "Points: " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}
-
+                    scorefinaltext = this.add.text(563, 525, "Points: " + score, { fontSize: '40px', fill: '#F6DB9D', fontFamily: 'Boogaloo'});}      
+                    
+            risavillano = this.sound.add("risavillano",{loop: false});       
             Musicagame.stop();   
-            perdersonido = this.sound.add("perdersonido", {loop: false});
             if (efsonido === true){
-            perdersonido.play();
-            }
+                risavillano.play();
+                        }
             var botonReintentar1 = this.add.image(643, 598, 'botonReintentar1').setScale(.6)
             var botonReintentar2 = this.add.image(643, 598, 'botonReintentar2').setScale(.6)
             if ( idioma === 1){

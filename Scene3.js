@@ -34,7 +34,7 @@ class Scene3 extends Phaser.Scene {
 
        //On y Off muscia
            Musicagame= this.sound.add("musicagame", {loop: true});
-           
+           //Musicacinematica.stop();
            if( MusicNivel === true){
             Musicagame.play();
         }    else if (MusicNivel === false){
@@ -46,6 +46,8 @@ class Scene3 extends Phaser.Scene {
         
         //aca estan las colisiones estaticas
         var  cajaDeColision = this.physics.add.staticGroup();
+        //var  cajaDeColision2 = this.physics.add.staticGroup();
+        
         //pared abajo
          cajaDeColision.create(610, 720, 'barraTransparente');
         //pared arriba
@@ -64,74 +66,68 @@ class Scene3 extends Phaser.Scene {
          cajaDeColision.create(1290, 320, 'barraTransparenteVertical');
         //mesa izquierda y dercha del medio
         if(nivel === 4)
-         {cajaDeColision.create(-450, 360, 'barraTransparente');}//para que no pisen a los niños
-         //cajaDeColision.create(1700, 360, 'barraTransparente');//para que no pisen a los niños
+        {
+            cajaDeColision.create(640, 470, 'barraTransparente2'); //para que no pisen a los niños
+        }
+         
 
          if(nivel === 5)
-         {cajaDeColision.create(-450, 360, 'barraTransparente');//para que no pisen a los niños
-         cajaDeColision.create(1750, 360, 'barraTransparente');}//para que no pisen a los niños
+        {
+           cajaDeColision.create(640, 470, 'barraTransparente2');//para que no pisen a los niños
+        }
          //mesa derecha y izquierda de abajo
-         cajaDeColision.create(-450, 540, 'barraTransparente');//para que no pisen a los niños
-         cajaDeColision.create(1750, 540, 'barraTransparente');//para que no pisen a los niños
+         cajaDeColision.create(-450, 470, 'barraTransparente');//para que no pisen a los niños
+         cajaDeColision.create(1750, 470, 'barraTransparente');//para que no pisen a los niños
          
         
         
 
          if (nivel === 1){
-            // Mesa izquierda
-this.add.image(170, 590, 'divisorIzq').setScale(0.8,0.6)
+            //mesa abajo izquierda
+this.add.image(170, 525, 'divisorIzq').setScale(0.8,0.6)
 //nena del medio
-this.add.image(170, 595, 'nMd1').setScale(.6)
+this.add.image(170, 530, 'nMd1').setScale(.6)
 //nena de la derecha
-this.add.image(300, 620, 'nDr1').setScale(.6)
+this.add.image(300, 560, 'nDr1').setScale(.6)
 //nene de la izquierda
-this.add.image(45, 620, 'nIz1').setScale(.6)
+this.add.image(45, 560, 'nIz1').setScale(.6)
 
-this.add.image(170, 650, 'mesa').setScale(1.1, 0.6)
-
-
-
-
-         // Mesa abajo derecha
-this.add.image(1120, 590, 'divisorDer').setScale(0.8,0.6)
+this.add.image(170, 585, 'mesa').setScale(1.1, 0.6)
+        // Mesa abajo derecha
+this.add.image(1120, 525, 'divisorDer').setScale(0.8,0.6)
 //nene izquierda
-this.add.image(995, 620, 'nIz2').setScale(.6)
+this.add.image(995, 560, 'nIz2').setScale(.6)
 //nene derecha
-this.add.image(1250, 620, 'nDr2').setScale(.6)
+this.add.image(1250, 560, 'nDr2').setScale(.6)
 //nene medio
-this.add.image(1120, 595, 'nMd2').setScale(.6)
+this.add.image(1120, 530, 'nMd2').setScale(.6)
 
-this.add.image(1120, 650, 'mesa').setScale(1.1 , 0.6)
-
-
-
-
+this.add.image(1120, 585, 'mesa').setScale(1.1 , 0.6)
 
 
 }else{ if (nivel === 2){
 
         // Mesa abajo izquierda
-            // Mesa abajo izquierda
-this.add.image(170, 590, 'divisorIzq').setScale(0.8,0.6)
+            //mesa abajo izquierda
+this.add.image(170, 525, 'divisorIzq').setScale(0.8,0.6)
 //nena del medio
-this.add.image(170, 595, 'nMd1').setScale(.6)
+this.add.image(170, 530, 'nMd1').setScale(.6)
 //nena de la derecha
-this.add.image(300, 620, 'nDr1').setScale(.6)
+this.add.image(300, 560, 'nDr1').setScale(.6)
 //nene de la izquierda
-this.add.image(45, 620, 'nIz1').setScale(.6)
+this.add.image(45, 560, 'nIz1').setScale(.6)
 
-this.add.image(170, 650, 'mesa').setScale(1.1, 0.6)
-
-         // Mesa abajo derecha
-this.add.image(1120, 590, 'divisorDer').setScale(0.8,0.6)
+this.add.image(170, 585, 'mesa').setScale(1.1, 0.6)
+        // Mesa abajo derecha
+this.add.image(1120, 525, 'divisorDer').setScale(0.8,0.6)
 //nene izquierda
-this.add.image(995, 620, 'nIz2').setScale(.6)
+this.add.image(995, 560, 'nIz2').setScale(.6)
 //nene derecha
-this.add.image(1250, 620, 'nDr2').setScale(.6)
+this.add.image(1250, 560, 'nDr2').setScale(.6)
 //nene medio
-this.add.image(1120, 595, 'nMd2').setScale(.6)
+this.add.image(1120, 530, 'nMd2').setScale(.6)
 
-this.add.image(1120, 650, 'mesa').setScale(1.1 , 0.6)
+this.add.image(1120, 585, 'mesa').setScale(1.1 , 0.6)
 
          //mesa arriba derecha
 this.add.image(1090, 200, 'divisorDer').setScale(0.8,0.6)
@@ -147,26 +143,26 @@ this.add.image(1090, 230, 'mesa').setScale(.9 , 0.5)
 
 
 } else { if (nivel === 3){
-             // Mesa abajo izquierda
-this.add.image(170, 590, 'divisorIzq').setScale(0.8,0.6)
+             //mesa abajo izquierda
+this.add.image(170, 525, 'divisorIzq').setScale(0.8,0.6)
 //nena del medio
-this.add.image(170, 595, 'nMd1').setScale(.6)
+this.add.image(170, 530, 'nMd1').setScale(.6)
 //nena de la derecha
-this.add.image(300, 620, 'nDr1').setScale(.6)
+this.add.image(300, 560, 'nDr1').setScale(.6)
 //nene de la izquierda
-this.add.image(45, 620, 'nIz1').setScale(.6)
+this.add.image(45, 560, 'nIz1').setScale(.6)
 
-this.add.image(170, 650, 'mesa').setScale(1.1, 0.6)
-         // Mesa abajo derecha
-this.add.image(1120, 590, 'divisorDer').setScale(0.8,0.6)
-         //nene izquierda
-this.add.image(995, 620, 'nIz2').setScale(.6)
+this.add.image(170, 585, 'mesa').setScale(1.1, 0.6)
+        // Mesa abajo derecha
+this.add.image(1120, 525, 'divisorDer').setScale(0.8,0.6)
+//nene izquierda
+this.add.image(995, 560, 'nIz2').setScale(.6)
 //nene derecha
-this.add.image(1250, 620, 'nDr2').setScale(.6)
+this.add.image(1250, 560, 'nDr2').setScale(.6)
 //nene medio
-this.add.image(1120, 595, 'nMd2').setScale(.6)
+this.add.image(1120, 530, 'nMd2').setScale(.6)
 
-this.add.image(1120, 650, 'mesa').setScale(1.1 , 0.6)
+this.add.image(1120, 585, 'mesa').setScale(1.1 , 0.6)
 
          //mesa arriba derecha
 this.add.image(1090, 200, 'divisorDer').setScale(0.8,0.6)
@@ -189,26 +185,26 @@ this.add.image(295, 210, 'nDr4').setScale(.5)
 this.add.image(170, 190, 'nMd4').setScale(.55)
 this.add.image(170, 230, 'mesa').setScale(.9 , 0.5)
 } else { if (nivel === 4){ 
-        // Mesa abajo izquierda
-this.add.image(170, 590, 'divisorIzq').setScale(0.8,0.6)
+        //mesa abajo izquierda
+this.add.image(170, 525, 'divisorIzq').setScale(0.8,0.6)
 //nena del medio
-this.add.image(170, 595, 'nMd1').setScale(.6)
+this.add.image(170, 530, 'nMd1').setScale(.6)
 //nena de la derecha
-this.add.image(300, 620, 'nDr1').setScale(.6)
+this.add.image(300, 560, 'nDr1').setScale(.6)
 //nene de la izquierda
-this.add.image(45, 620, 'nIz1').setScale(.6)
+this.add.image(45, 560, 'nIz1').setScale(.6)
 
-this.add.image(170, 650, 'mesa').setScale(1.1, 0.6)
+this.add.image(170, 585, 'mesa').setScale(1.1, 0.6)
         // Mesa abajo derecha
-this.add.image(1120, 590, 'divisorDer').setScale(0.8,0.6)
+this.add.image(1120, 525, 'divisorDer').setScale(0.8,0.6)
 //nene izquierda
-this.add.image(995, 620, 'nIz2').setScale(.6)
+this.add.image(995, 560, 'nIz2').setScale(.6)
 //nene derecha
-this.add.image(1250, 620, 'nDr2').setScale(.6)
+this.add.image(1250, 560, 'nDr2').setScale(.6)
 //nene medio
-this.add.image(1120, 595, 'nMd2').setScale(.6)
+this.add.image(1120, 530, 'nMd2').setScale(.6)
 
-this.add.image(1120, 650, 'mesa').setScale(1.1 , 0.6)
+this.add.image(1120, 585, 'mesa').setScale(1.1 , 0.6)
 
         //mesa arriba derecha
 this.add.image(1090, 200, 'divisorDer').setScale(0.8,0.6)
@@ -231,36 +227,36 @@ this.add.image(295, 210, 'nDr4').setScale(.5)
 this.add.image(170, 190, 'nMd4').setScale(.55)
 this.add.image(170, 230, 'mesa').setScale(.9 , 0.5)
 
-         //mesa medio izquierda
-this.add.image(170, 415, 'divisorIzq').setScale(0.75,0.6)                             
+         //mesa medio centro
+this.add.image(640, 525, 'divisorIzq').setScale(0.75,0.6)                             
 //nene izquierda
-this.add.image(47, 450, 'nIz5').setScale(.55)
+this.add.image(517, 560, 'nIz5').setScale(.55)
 //nene derecha
-this.add.image(297, 450, 'nDr5').setScale(.55)
+this.add.image(767, 560, 'nDr5').setScale(.55)
 //nene medio
-this.add.image(170, 420, 'nMd5').setScale(.55)
-this.add.image(170, 475, 'mesa').setScale(1 , 0.55)
+this.add.image(640, 530, 'nMd5').setScale(.55)
+this.add.image(640, 585, 'mesa').setScale(1 , 0.55)
 }else {
     //mesa abajo izquierda
-this.add.image(170, 590, 'divisorIzq').setScale(0.8,0.6)
+this.add.image(170, 525, 'divisorIzq').setScale(0.8,0.6)
 //nena del medio
-this.add.image(170, 595, 'nMd1').setScale(.6)
+this.add.image(170, 530, 'nMd1').setScale(.6)
 //nena de la derecha
-this.add.image(300, 620, 'nDr1').setScale(.6)
+this.add.image(300, 560, 'nDr1').setScale(.6)
 //nene de la izquierda
-this.add.image(45, 620, 'nIz1').setScale(.6)
+this.add.image(45, 560, 'nIz1').setScale(.6)
 
-this.add.image(170, 650, 'mesa').setScale(1.1, 0.6)
+this.add.image(170, 585, 'mesa').setScale(1.1, 0.6)
         // Mesa abajo derecha
-this.add.image(1120, 590, 'divisorDer').setScale(0.8,0.6)
+this.add.image(1120, 525, 'divisorDer').setScale(0.8,0.6)
 //nene izquierda
-this.add.image(995, 620, 'nIz2').setScale(.6)
+this.add.image(995, 560, 'nIz2').setScale(.6)
 //nene derecha
-this.add.image(1250, 620, 'nDr2').setScale(.6)
+this.add.image(1250, 560, 'nDr2').setScale(.6)
 //nene medio
-this.add.image(1120, 595, 'nMd2').setScale(.6)
+this.add.image(1120, 530, 'nMd2').setScale(.6)
 
-this.add.image(1120, 650, 'mesa').setScale(1.1 , 0.6)
+this.add.image(1120, 585, 'mesa').setScale(1.1 , 0.6)
 
         //mesa arriba derecha
 this.add.image(1090, 200, 'divisorDer').setScale(0.8,0.6)
@@ -283,25 +279,17 @@ this.add.image(295, 210, 'nDr4').setScale(.5)
 this.add.image(170, 190, 'nMd4').setScale(.55)
 this.add.image(170, 230, 'mesa').setScale(.9 , 0.5)
 
-         //mesa medio izquierda
-this.add.image(170, 415, 'divisorIzq').setScale(0.75,0.6)                             
+        //mesa abajo centro
+this.add.image(640, 525, 'divisorIzq').setScale(0.75,0.6)                             
 //nene izquierda
-this.add.image(47, 450, 'nIz5').setScale(.55)
+this.add.image(517, 560, 'nIz5').setScale(.55)
 //nene derecha
-this.add.image(297, 450, 'nDr5').setScale(.55)
+this.add.image(767, 560, 'nDr5').setScale(.55)
 //nene medio
-this.add.image(170, 420, 'nMd5').setScale(.55)
-this.add.image(170, 475, 'mesa').setScale(1 , 0.55)
+this.add.image(640, 530, 'nMd5').setScale(.55)
+this.add.image(640, 585, 'mesa').setScale(1 , 0.55)
 
-            //mesa medio derecha
-this.add.image(1120, 415, 'divisorDer').setScale(0.75,0.6)
-            //nene izquierda
-this.add.image(998, 450, 'nIz6').setScale(.55)
-//nene derecha
-this.add.image(1247, 450, 'nDr6').setScale(.55)
-//nene medio
-this.add.image(1120, 420, 'nMd6').setScale(.55)
-this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
+            
 }}}} 
             
     
@@ -361,19 +349,19 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 contadorPilas = 1;
             }
                                         //mesa abajo izquierda
-             //izquierda
-             ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
-             //medio
-             ham2 = hamburgesas.create(165, 620, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
-             //derecha
-             ham3 = hamburgesas.create(245, 620, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
-                                         //mesa abajo derecha
-             //izquierda
-             ham4 = hamburgesas.create(1040, 620, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
-             //medio
-             ham5 = hamburgesas.create(1120, 620, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
-             //derecha
-             ham6 = hamburgesas.create(1205, 620, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
+            //izquierda
+            ham1 = hamburgesas.create(90, 555, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
+            //medio
+            ham2 = hamburgesas.create(165, 555, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
+            //derecha
+            ham3 = hamburgesas.create(245, 555, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
+                                        //mesa abajo derecha
+            //izquierda
+            ham4 = hamburgesas.create(1040, 555, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
+            //medio
+            ham5 = hamburgesas.create(1120, 555, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
+            //derecha
+            ham6 = hamburgesas.create(1205, 555, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
             tiempoInicial = 0;
 
         }else{ if(nivel === 2){  
@@ -382,18 +370,18 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             }
                                 //mesa abajo izquierda
             //izquierda
-            ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
+            ham1 = hamburgesas.create(90, 555, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
             //medio
-            ham2 = hamburgesas.create(165, 620, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
+            ham2 = hamburgesas.create(165, 555, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham3 = hamburgesas.create(245, 620, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
+            ham3 = hamburgesas.create(245, 555, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
                                         //mesa abajo derecha
             //izquierda
-            ham4 = hamburgesas.create(1040, 620, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
+            ham4 = hamburgesas.create(1040, 555, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
             //medio
-            ham5 = hamburgesas.create(1120, 620, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
+            ham5 = hamburgesas.create(1120, 555, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham6 = hamburgesas.create(1205, 620, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
+            ham6 = hamburgesas.create(1205, 555, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
                                         //mesa arriba derecha
             //izquierda
             ham7 = hamburgesas.create(1010, 200, 'hamb').setScale(.9).setTint(hamburguesa7).setInteractive({ cursor: 'pointer' })
@@ -426,21 +414,21 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             if(contadorPilas === 0){
                 contadorPilas = 1;
             }
-                          //mesa abajo izquierda
+                           //mesa abajo izquierda
             //izquierda
-            ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
+            ham1 = hamburgesas.create(90, 555, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
             //medio
-            ham2 = hamburgesas.create(165, 620, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
+            ham2 = hamburgesas.create(165, 555, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham3 = hamburgesas.create(245, 620, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
+            ham3 = hamburgesas.create(245, 555, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
                                         //mesa abajo derecha
             //izquierda
-            ham4 = hamburgesas.create(1040, 620, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
+            ham4 = hamburgesas.create(1040, 555, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
             //medio
-            ham5 = hamburgesas.create(1120, 620, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
+            ham5 = hamburgesas.create(1120, 555, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham6 = hamburgesas.create(1205, 620, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
-                                         //mesa arriba derecha
+            ham6 = hamburgesas.create(1205, 555, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
+                                        //mesa arriba derecha
             //izquierda
             ham7 = hamburgesas.create(1010, 200, 'hamb').setScale(.9).setTint(hamburguesa7).setInteractive({ cursor: 'pointer' })
             //medio
@@ -479,20 +467,20 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             if(contadorPilas === 0){
                 contadorPilas = 1;
             }
-                        //mesa abajo izquierda
+                         //mesa abajo izquierda
             //izquierda
-            ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
+            ham1 = hamburgesas.create(90, 555, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
             //medio
-            ham2 = hamburgesas.create(165, 620, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
+            ham2 = hamburgesas.create(165, 555, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham3 = hamburgesas.create(245, 620, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
+            ham3 = hamburgesas.create(245, 555, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
                                         //mesa abajo derecha
             //izquierda
-            ham4 = hamburgesas.create(1040, 620, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
+            ham4 = hamburgesas.create(1040, 555, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
             //medio
-            ham5 = hamburgesas.create(1120, 620, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
+            ham5 = hamburgesas.create(1120, 555, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham6 = hamburgesas.create(1205, 620, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
+            ham6 = hamburgesas.create(1205, 555, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
                                         //mesa arriba derecha
             //izquierda
             ham7 = hamburgesas.create(1010, 200, 'hamb').setScale(.9).setTint(hamburguesa7).setInteractive({ cursor: 'pointer' })
@@ -509,13 +497,13 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             //derecha
             ham12 = hamburgesas.create(245, 200, 'hamb').setScale(.9).setTint(hamburguesa12).setInteractive({ cursor: 'pointer' })
             
-                                             //mesa medio izquierda
+                                             //mesa abajo centro
             //izquierda
-            ham13 = hamburgesas.create(90, 450, 'hamb').setScale(.95).setTint(hamburguesa13).setInteractive({ cursor: 'pointer' })
+            ham13 = hamburgesas.create(565, 555, 'hamb').setScale(.95).setTint(hamburguesa13).setInteractive({ cursor: 'pointer' })
             //medio
-            ham14 = hamburgesas.create(165, 450, 'hamb').setScale(.95).setTint(hamburguesa14).setInteractive({ cursor: 'pointer' })
+            ham14 = hamburgesas.create(640, 555, 'hamb').setScale(.95).setTint(hamburguesa14).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham15 = hamburgesas.create(245, 450, 'hamb').setScale(.95).setTint(hamburguesa15).setInteractive({ cursor: 'pointer' })
+            ham15 = hamburgesas.create(715, 555, 'hamb').setScale(.95).setTint(hamburguesa15).setInteractive({ cursor: 'pointer' })
                 //hamburguesa extra en la cocina
            // hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
             lentes = hamburgesas.create(1100, 45, 'lenteshud').setScale(0.7).setInteractive({ cursor: 'pointer' }).setVisible(true)
@@ -541,18 +529,18 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             }
                       //mesa abajo izquierda
             //izquierda
-            ham1 = hamburgesas.create(90, 620, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
+            ham1 = hamburgesas.create(90, 555, 'hamb').setScale(1).setTint(hamburguesa1).setInteractive({ cursor: 'pointer' })
             //medio
-            ham2 = hamburgesas.create(165, 620, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
+            ham2 = hamburgesas.create(165, 555, 'hamb').setScale(1).setTint(hamburguesa2).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham3 = hamburgesas.create(245, 620, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
+            ham3 = hamburgesas.create(245, 555, 'hamb').setScale(1).setTint(hamburguesa3).setInteractive({ cursor: 'pointer' })
                                         //mesa abajo derecha
             //izquierda
-            ham4 = hamburgesas.create(1040, 620, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
+            ham4 = hamburgesas.create(1040, 555, 'hamb').setScale(1).setTint(hamburguesa4).setInteractive({ cursor: 'pointer' })
             //medio
-            ham5 = hamburgesas.create(1120, 620, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
+            ham5 = hamburgesas.create(1120, 555, 'hamb').setScale(1).setTint(hamburguesa5).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham6 = hamburgesas.create(1205, 620, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
+            ham6 = hamburgesas.create(1205, 555, 'hamb').setScale(1).setTint(hamburguesa6).setInteractive({ cursor: 'pointer' })
                                         //mesa arriba derecha
             //izquierda
             ham7 = hamburgesas.create(1010, 200, 'hamb').setScale(.9).setTint(hamburguesa7).setInteractive({ cursor: 'pointer' })
@@ -569,21 +557,21 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             //derecha
             ham12 = hamburgesas.create(245, 200, 'hamb').setScale(.9).setTint(hamburguesa12).setInteractive({ cursor: 'pointer' })
             
-                                             //mesa medio izquierda
+                                             //mesa abajo centro
             //izquierda
-            ham13 = hamburgesas.create(90, 450, 'hamb').setScale(.95).setTint(hamburguesa13).setInteractive({ cursor: 'pointer' })
+            ham13 = hamburgesas.create(565, 555, 'hamb').setScale(.95).setTint(hamburguesa13).setInteractive({ cursor: 'pointer' })
             //medio
-            ham14 = hamburgesas.create(165, 450, 'hamb').setScale(.95).setTint(hamburguesa14).setInteractive({ cursor: 'pointer' })
+            ham14 = hamburgesas.create(640, 555, 'hamb').setScale(.95).setTint(hamburguesa14).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham15 = hamburgesas.create(245, 450, 'hamb').setScale(.95).setTint(hamburguesa15).setInteractive({ cursor: 'pointer' })
+            ham15 = hamburgesas.create(715, 555, 'hamb').setScale(.95).setTint(hamburguesa15).setInteractive({ cursor: 'pointer' })
             
-                                             //mesa medio derecha
+                                             //cocina arriba centro
             //izquierda
-            ham16 = hamburgesas.create(1040, 450, 'hamb').setScale(.95).setTint(hamburguesa16).setInteractive({ cursor: 'pointer' })
+            ham16 = hamburgesas.create(565, 235, 'hamb').setScale(.95).setTint(hamburguesa16).setInteractive({ cursor: 'pointer' })
             //medio
-            ham17 = hamburgesas.create(1120, 450, 'hamb').setScale(.95).setTint(hamburguesa17).setInteractive({ cursor: 'pointer' })
+            ham17 = hamburgesas.create(640, 235, 'hamb').setScale(.95).setTint(hamburguesa17).setInteractive({ cursor: 'pointer' })
             //derecha
-            ham18 = hamburgesas.create(1205, 450, 'hamb').setScale(.95).setTint(hamburguesa18).setInteractive({ cursor: 'pointer' })
+            ham18 = hamburgesas.create(715, 235, 'hamb').setScale(.95).setTint(hamburguesa18).setInteractive({ cursor: 'pointer' })
             
                 //hamburguesa extra en la cocina
            // hamExtra = hamburgesas.create(640, 142, 'hamb').setScale(1).setInteractive({ cursor: 'pointer' }).disableBody(true, true)
@@ -611,8 +599,8 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
          
         
         // Creamos el jugador
-        jugador = this.physics.add.sprite(640, 480, 'bobFrenteReposo').setScale(0.6);
-        boblentes = this.physics.add.sprite(640, 480, 'bobFrenteLentes').setScale(0.6);
+        jugador = this.physics.add.sprite(800, 280, 'bobFrenteReposo').setScale(0.6);
+        boblentes = this.physics.add.sprite(800, 280, 'bobFrenteLentes').setScale(0.6);
         gafas = this.physics.add.sprite(jugador.x, jugador.y - 56, 'lentes').setScale(0.6).setVisible(false);
 
         jugador.setBounce(0);
@@ -690,6 +678,8 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                                                                     target.y = jugador.y;
                                                                     jugador.body.reset(target.x, target.y);
                                                                     });
+        
+        
 
         // Ponemos el puntaje en pantalla
         //var scoreimage = this.add.image(640, 26, 'puntaje').setScale(0.7)
@@ -1322,7 +1312,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
         }}}}
         
 
-        if (distancia2 < 9)
+        if (distancia2 <20)
         {          
             if(hamburguesa1 === colores[0] ){
                 this.physics.add.overlap(jugador, ham1, agarrarbuena, null, this);
@@ -1331,7 +1321,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             }
             
         }
-        if (distancia3 < 9)
+        if (distancia3 <20)
         {
             if(hamburguesa2 === colores[0] ){
                 this.physics.add.overlap(jugador, ham2, agarrarbuena, null, this);
@@ -1340,7 +1330,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             }
            
         }
-        if (distancia4 < 9)
+        if (distancia4 <20)
         {          
             if(hamburguesa3 === colores[0] ){
                 this.physics.add.overlap(jugador, ham3, agarrarbuena, null, this);
@@ -1348,7 +1338,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham3, agarrarmala, null, this);
             }
         }
-        if (distancia5 < 9)
+        if (distancia5 <20)
         {          
             if(hamburguesa4 === colores[0] ){
                 this.physics.add.overlap(jugador, ham4, agarrarbuena, null, this);
@@ -1356,7 +1346,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham4, agarrarmala, null, this);
             }
         }
-        if (distancia6 < 9)
+        if (distancia6 <20)
         {
             if(hamburguesa5 === colores[0] ){
                 this.physics.add.overlap(jugador, ham5, agarrarbuena, null, this);
@@ -1364,7 +1354,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham5, agarrarmala, null, this);
             }
         }
-        if (distancia7 < 9)
+        if (distancia7 <20)
         {
             if(hamburguesa6 === colores[0] ){
                 this.physics.add.overlap(jugador, ham6, agarrarbuena, null, this);
@@ -1373,7 +1363,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             }
         }
 
-        if (distancia8 < 9)
+        if (distancia8 <20)
         {
             if(hamburguesa7 === colores[0] ){
                 this.physics.add.overlap(jugador, ham7, agarrarbuena, null, this);
@@ -1382,7 +1372,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             }
         }
 
-        if (distancia9 < 9)
+        if (distancia9 <20)
         {
             if(hamburguesa8 === colores[0] ){
                 this.physics.add.overlap(jugador, ham8, agarrarbuena, null, this);
@@ -1391,7 +1381,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
             }
         }
 
-        if (distancia10 < 9)
+        if (distancia10 <20)
         {
             if(hamburguesa9 === colores[0] ){
                 this.physics.add.overlap(jugador, ham9, agarrarbuena, null, this);
@@ -1399,7 +1389,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham9, agarrarmala, null, this);
             }
         }
-        if (distancia11 < 9)
+        if (distancia11 <20)
         {
             if(hamburguesa10 === colores[0] ){
                 this.physics.add.overlap(jugador, ham10, agarrarbuena, null, this);
@@ -1407,7 +1397,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham10, agarrarmala, null, this);
             }
         }
-        if (distancia12 < 9)
+        if (distancia12 <20)
         {
             if(hamburguesa11 === colores[0] ){
                 this.physics.add.overlap(jugador, ham11, agarrarbuena, null, this);
@@ -1415,7 +1405,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham11, agarrarmala, null, this);
             }
         }
-        if (distancia13 < 9)
+        if (distancia13 <20)
         {
             if(hamburguesa12 === colores[0] ){
                 this.physics.add.overlap(jugador, ham12, agarrarbuena, null, this);
@@ -1423,7 +1413,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham12, agarrarmala, null, this);
             }
         }
-        if (distancia14 < 9)
+        if (distancia14 <20)
         {
             if(hamburguesa13 === colores[0] ){
                 this.physics.add.overlap(jugador, ham13, agarrarbuena, null, this);
@@ -1431,7 +1421,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham13, agarrarmala, null, this);
             }
         }
-        if (distancia15 < 9)
+        if (distancia15 <20)
         {
             if(hamburguesa14 === colores[0] ){
                 this.physics.add.overlap(jugador, ham14, agarrarbuena, null, this);
@@ -1439,7 +1429,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham14, agarrarmala, null, this);
             }
         }
-        if (distancia16 < 9)
+        if (distancia16 <20)
         {
             if(hamburguesa15 === colores[0] ){
                 this.physics.add.overlap(jugador, ham15, agarrarbuena, null, this);
@@ -1447,21 +1437,21 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
                 this.physics.add.overlap(jugador, ham15, agarrarmala, null, this);
             }
         }
-        if (distancia17 < 9)
+        if (distancia17 <20)
         {
             if(hamburguesa16 === colores[0] ){
                 this.physics.add.overlap(jugador, ham16, agarrarbuena, null, this);
             }else{
                 this.physics.add.overlap(jugador, ham16, agarrarmala, null, this);
             }
-        } if (distancia18 < 9)
+        } if (distancia18 <20)
         {
             if(hamburguesa17 === colores[0] ){
                 this.physics.add.overlap(jugador, ham17, agarrarbuena, null, this);
             }else{
                 this.physics.add.overlap(jugador, ham17, agarrarmala, null, this);
             }
-        } if (distancia19 < 9)
+        } if (distancia19 <20)
         {
             if(hamburguesa18 === colores[0] ){
                 this.physics.add.overlap(jugador, ham18, agarrarbuena, null, this);
@@ -1471,7 +1461,7 @@ this.add.image(1120, 475, 'mesa').setScale(1 , 0.55)
         }
 
 
-       // if (distancia20 < 9)
+       // if (distancia20 <20)
       //  {
            // this.physics.add.overlap(jugador, hamExtra, agarrarExtra(jugador, hamExtra), null, this);
             
@@ -1851,7 +1841,7 @@ function tiempoNivel() {
 
 function coolDown(){
     tiempoCoolDown--;
-    if(tiempoInicial === 23 || tiempoInicial === 16 || tiempoInicial === 9 )
+    if(tiempoInicial === 25 || tiempoInicial === 18 || tiempoInicial === 10 )
     {
         if(contadorPilas > 0){if (nivel === 2)
         {//lentes.setVisible(true);
@@ -1866,14 +1856,18 @@ function coolDown(){
         contador= 1;
         if(contadorPilas>=0 && contadorPilas<3)
         {if(pilaCreada === false)
-        {randomX = Phaser.Math.FloatBetween(427, 854);
-        randomY = Phaser.Math.FloatBetween(400, 700);
+        {randomX = Phaser.Math.FloatBetween(50, 1000);
+            randomY = Phaser.Math.FloatBetween(180, 480);
         pila = this.add.image(randomX, randomY, 'PUPila').setScale(0.5).setInteractive({ cursor: 'pointer' })
         pilaCreada = true;
+        
         }}
         pila.on ('pointerdown', () =>{
+            cambioHsonido = this.sound.add("cambiohamburguesa10" , {loop: false});
+            if (efsonido === true){
+            cambioHsonido.play();
+            }   
             pila.destroy();
-            
             if(contadorPilas>=0 && contadorPilas<=3 && pilaCreada === true)
             {contadorPilas++;
                 pilaCreada= false;}
@@ -1896,12 +1890,16 @@ function coolDown(){
         contador= 1;
         if(contadorPilas>=0 && contadorPilas<3)
             {if(pilaCreada === false)
-            {randomX = Phaser.Math.FloatBetween(427, 854);
-            randomY = Phaser.Math.FloatBetween(400, 700);
+            {randomX = Phaser.Math.FloatBetween(50, 1000);
+                randomY = Phaser.Math.FloatBetween(180, 480);
             pila = this.add.image(randomX, randomY, 'PUPila').setScale(0.5).setInteractive({ cursor: 'pointer' })
             pilaCreada = true;
             }}
             pila.on ('pointerdown', () =>{
+                cambioHsonido = this.sound.add("cambiohamburguesa10" , {loop: false});
+                if (efsonido === true){
+                cambioHsonido.play();
+                }
                 pila.destroy();
                 
                 if(contadorPilas>=0 && contadorPilas<=3 && pilaCreada === true)
@@ -1925,12 +1923,16 @@ function coolDown(){
             contador= 1;
             if(contadorPilas>=0 && contadorPilas<3)
             {if(pilaCreada === false)
-            {randomX = Phaser.Math.FloatBetween(427, 854);
-            randomY = Phaser.Math.FloatBetween(400, 700);
+            {randomX = Phaser.Math.FloatBetween(50, 1000);
+                randomY = Phaser.Math.FloatBetween(180, 480);
             pila = this.add.image(randomX, randomY, 'PUPila').setScale(0.5).setInteractive({ cursor: 'pointer' })
             pilaCreada = true;
             }}
             pila.on ('pointerdown', () =>{
+                cambioHsonido = this.sound.add("cambiohamburguesa10" , {loop: false});
+                if (efsonido === true){
+                cambioHsonido.play();
+                }
                 pila.destroy();
                 
                 if(contadorPilas>=0 && contadorPilas<=3 && pilaCreada === true)
@@ -1954,12 +1956,16 @@ function coolDown(){
             contador= 1;
             if(contadorPilas>=0 && contadorPilas<3)
             {if(pilaCreada === false)
-            {randomX = Phaser.Math.FloatBetween(427, 854);
-            randomY = Phaser.Math.FloatBetween(400, 700);
+            {randomX = Phaser.Math.FloatBetween(50, 1000);
+            randomY = Phaser.Math.FloatBetween(180, 480);
             pila = this.add.image(randomX, randomY, 'PUPila').setScale(0.5).setInteractive({ cursor: 'pointer' })
             pilaCreada = true;
             }}
             pila.on ('pointerdown', () =>{
+                cambioHsonido = this.sound.add("cambiohamburguesa10" , {loop: false});
+                if (efsonido === true){
+                cambioHsonido.play();
+                }
                 pila.destroy();
                 
                 if(contadorPilas>=0 && contadorPilas<=3 && pilaCreada === true)

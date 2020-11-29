@@ -41,7 +41,7 @@ class Scene8 extends Phaser.Scene {
                     if(efsonido === true){
                         hoja.play();
                         }
-                    Musicacinematica.stop();
+                    
                     this.scene.start('tutorial');
                 }
             }       

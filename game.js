@@ -10,7 +10,7 @@ var config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 0 },
-            debug: false
+            debug: true
         
         }
 
@@ -99,6 +99,7 @@ var bateria;
 var lentes;
 var gafas;
 var lentesBob;
+
 //variables para sonidos
 var Musicagame;
 var Musicamenu;
@@ -109,7 +110,8 @@ var ganarsonido;
 var perdersonido;
 var sonando;
 var hoja;
-
+var risavillano;
+var ganarfinal;
 
 //hamburguesas
 var colores = [0x800a0c, 0x1998ff];
