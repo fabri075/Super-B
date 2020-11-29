@@ -245,15 +245,12 @@ class Scene1 extends Phaser.Scene {
       
       // () =>
       // funciones flecha
+      this.time.delayedCall(3500, pasarEscena, [], this);
       
-      logo.setInteractive()
-      logo.on('pointerdown', () => {  
-                                      this.scene.start('menu');
-                                    } );
 
-      // Funcion FLECHA
-      // (param1, param2, …, paramN) => { sentencias }
-      // (param1, param2, …, paramN) => expresion
-      // Equivalente a: () => { return expresion; }
+     
     }
+}
+function pasarEscena(){
+  this.scene.start('menu');
 }
