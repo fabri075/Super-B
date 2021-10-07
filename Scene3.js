@@ -10,7 +10,7 @@ class Scene3 extends Phaser.Scene {
 
     create() {
         
-       
+        Musicacinematica.stop();
         this.add.image(640, 360, 'fondo2').setScale(0.67, 0.67)
         this.add.image(640, 195, 'casita').setScale(.7, .7)
         this.add.image(628, 170, 'casitaFondo').setScale(.75, 1)
